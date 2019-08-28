@@ -1,4 +1,4 @@
 baseURL = "https://www.tensketch.com/"
 languageCode = "en-us"
 title = "TenSketch"
-theme = "hugo-theme-TenSketch"
+theme = "hugo-theme-Tensketch"
