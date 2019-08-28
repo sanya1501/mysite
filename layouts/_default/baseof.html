@@ -1,0 +1,11 @@
+<!DOCTYPE html>
+<html>
+{{- partial "head.html" . -}}
+<!-- navbar fixed top after scrolling down -->
+<body data-spy="scroll" data-target="navbar" data-offset="100">
+    {{- block "main" . }}{{- end }}
+    {{- partial "header.html" . -}}
+    {{- block "content" . }}{{- end }}
+    {{- partial "footer.html" . -}}
+</body>
+</html>
