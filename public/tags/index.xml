@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Tags on TenSketch</title>
+    <link>https://www.tensketch.com/tags/</link>
+    <description>Recent content in Tags on TenSketch</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sat, 28 Mar 2020 01:43:58 +0530</lastBuildDate>
+    
+	<atom:link href="https://www.tensketch.com/tags/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>clients</title>
+      <link>https://www.tensketch.com/tags/clients/</link>
+      <pubDate>Sat, 28 Mar 2020 01:43:58 +0530</pubDate>
+      
+      <guid>https://www.tensketch.com/tags/clients/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>websites</title>
+      <link>https://www.tensketch.com/tags/websites/</link>
+      <pubDate>Mon, 23 Mar 2020 15:12:53 +0530</pubDate>
+      
+      <guid>https://www.tensketch.com/tags/websites/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>bcards</title>
+      <link>https://www.tensketch.com/tags/bcards/</link>
+      <pubDate>Thu, 19 Mar 2020 20:05:29 +0530</pubDate>
+      
+      <guid>https://www.tensketch.com/tags/bcards/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>graphics</title>
+      <link>https://www.tensketch.com/tags/graphics/</link>
+      <pubDate>Thu, 19 Mar 2020 20:03:20 +0530</pubDate>
+      
+      <guid>https://www.tensketch.com/tags/graphics/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>logor</title>
+      <link>https://www.tensketch.com/tags/logor/</link>
+      <pubDate>Thu, 19 Mar 2020 19:58:02 +0530</pubDate>
+      
+      <guid>https://www.tensketch.com/tags/logor/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>logo</title>
+      <link>https://www.tensketch.com/tags/logo/</link>
+      <pubDate>Thu, 19 Mar 2020 19:57:05 +0530</pubDate>
+      
+      <guid>https://www.tensketch.com/tags/logo/</guid>
+      <description></description>
+    </item>
+    
+  </channel>
+</rss>

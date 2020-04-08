@@ -1,0 +1,95 @@
+<section id="contact">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-4 col-md-12">
+                <img src="/images/logo-black.png" alt="" class="img-fluid my-3">
+                <p class="font-italic">{{ .Site.Params.Description }}</p>
+            </div>
+            <div class="col-lg-4 col-md-12">
+                <h3 class="my-3">Reach us</h3>
+                <!-- <address><i class="fa fa-map-marker mr-2" aria-hidden="true"></i><b>Office Address:</b><br>
+                    HIG #3 NH 1, M.G.R Salai,<br>
+                    Maraimalai Nagar,<br>
+                    Chengalpattu district, TN-603 209.</address> -->
+                <ul class="list-unstyled mb-0">
+                    <li class="mb-2">
+                        <i class="fa fa-mobile mr-2"></i>
+                        <a href="tel:9840166419" title="call"
+                            aria-label="Raghu properties mobile number">+91-9840166419</a>
+                    </li>
+                    <li class="mb-2">
+                        <i class="fa fa-mobile mr-2"></i>
+                        <a href="tel:7010633516" title="call"
+                            aria-label="Raghu properties mobile number">+91-7010633516</a>
+                    </li>
+                    <li class="mb-2">
+                        <i class="fa fa-envelope mr-2"></i>
+                        <a href="mailto:bala@tensketch.com" title="Click to send email" aria-label="TenSketch email id"
+                            target="_top">bala@tensketch.com</a>
+                    </li>
+                </ul>
+                <div class="social mt-3">
+                    <ul class="list-unstyled d-flex">
+                        <li>
+                            <a href="https://www.facebook.com/tensketch285/" target="_blank" rel="noopener"
+                                aria-label="fb page of TenSketch"><i class="fab fa-facebook"></i></a>
+                        </li>
+                        <li>
+                            <a href="https://www.linkedin.com/company/tensketch" target="_blank" rel="noopener"
+                                aria-label="linkedin page of TenSketch"><i class="fab fa-linkedin"></i></a>
+                        </li>
+                        <!-- <li>
+                            <a href="https://www.facebook.com/tensketch285/" target="_blank" rel="noopener"
+                                aria-label="twitter page of TenSketch"><i class="fab fa-twitter"></i></a>
+                        </li> -->
+                        <li>
+                            <a href="https://www.youtube.com/channel/UCa3k-JV9xA6ncMGKaZCyU-Q?view_as=subscriber" target="_blank" rel="noopener"
+                                aria-label="fb page of TenSketch"><i class="fab fa-youtube"></i></a>
+                        </li>
+                        <li>
+                            <a href="https://g.page/Website-designers-Chennai?share" target="_blank" rel="noopener"
+                                aria-label="google business page link of TenSketch"
+                                title="find location in google business page"><i class="fab fa-google"
+                                    aria-hidden="true"></i></a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-12">
+                <h3 class="my-3">Write to us</h3>
+                <form name="Contact" method="POST" data-netlify="true" data-netlify-recaptcha="true">
+                    <div class="form-group">
+                        <label style="text-align:left" for="name">Name</label>
+                        <input type="text" class="form-control" name="Name" placeholder="Enter your name"
+                            aria-label="Name" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="contact">Contact #</label>
+                        <input type="tel" class="form-control" name="Contact #" placeholder="your 10 digit mobile no."
+                            aria-label="contact_no" minlength="10" maxlength="10" autocomplete="off" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email</label>
+                        <input type="email" class="form-control" name="Email id" placeholder="abc@somemail.com"
+                            aria-label="e_mail_address" autocomplete="off" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="message">Message</label>
+                        <textarea class="form-control" name="Message" placeholder="Enter your message" rows="2"
+                            aria-label="message" spellcheck="false" required></textarea>
+                    </div>
+                    <div data-netlify-recaptcha="true" class="recaptcha"></div>
+                    <input type="submit" class="btn btn-primary btn-block mt-3" value="Submit" aria-label="Submit button">
+                </form>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- Copyrights -->
+<section class="bottom-footer mt-3">
+    <div class="container">
+        <p class="text-center mb-0">Copyright &copy;
+            <script>document.write(new Date().getFullYear());</script>&nbsp;<a href="https://www.tensketch.com/"
+                aria-label="TenSketch website developer company link">TenSketch</a></p>
+    </div>
+</section>
