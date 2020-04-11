@@ -20,11 +20,10 @@
             <div class="col-md-8 mx-auto">
                 <h1 class="mb-3">About us</h1>
                 <p>
-                    TenSketch is revolutionary IT start-up founded on 28 August 2017. We provide holistic business
-                    solutions to various sectors of the business world. We believe in simplicity and minimalism while
-                    sketching solutions. We specialize in creating fast and powerful web and mobile applications using
-                    fast and reliable open source technologies. We create powerful messages through our dynamic content
-                    delivery and branding team.
+                    TenSketch was founded on 28 August 2017. We provide holistic business solutions to various sectors
+                    of the business world. Our core values are minimalism and organized work. We specialize in creating
+                    fast and powerful web solutions using reliable open source technologies. We create powerful messages
+                    through our dynamic content writing and branding team.
                 </p>
             </div>
         </div>
@@ -73,136 +72,107 @@
 {{end}}
 {{define "port"}}
 <section id="portfolio" class="py-5 parallax">
-    <div class="container-fluid">
+    <div class="container">
         <h1 class="text-center my-5 pt-5">portfolio</h1>
-        <div class="container">
-            <!-- Nav pills -->
-            <ul class="nav nav-pills nav-justified" role="tablist">
-                <li class="nav-item">
-                    <a class="nav-link active" data-toggle="pill" href="#website">websites</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" data-toggle="pill" href="#branding">branding</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" data-toggle="pill" href="#content">content</a>
-                </li>
-            </ul>
-            <!-- Tab panes -->
-            <div class="tab-content mt-3">
-                <div id="website" class="container tab-pane active">
-                    <div class="row">
-                        {{range $index, $val := .Site.Taxonomies.tags.websites}}
-                        <div class="col-lg-4 col-md-4 col-4 my-3">
-                            <a href="{{.Description}}" target="_blank" rel="noopener" aria-label="{{.Name}}">
-                                <img src="{{.Page.Params.image}}" class="img-fluid" alt="{{.Name}}">
-                            </a>
-                        </div>
-                        {{end}}
+        <!-- Nav pills -->
+        <ul class="nav nav-pills nav-justified" role="tablist">
+            <li class="nav-item">
+                <a class="nav-link active" data-toggle="pill" href="#website">websites</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" data-toggle="pill" href="#branding">branding</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" data-toggle="pill" href="#content">content</a>
+            </li>
+        </ul>
+        <!-- Tab panes -->
+        <div class="tab-content mt-3">
+            <div id="website" class="tab-pane active">
+                <div class="row">
+                    {{range $index, $val := .Site.Taxonomies.tags.websites}}
+                    <div class="col-lg-4 col-md-4 col-4 my-3">
+                        <a href="{{.Description}}" target="_blank" rel="noopener" aria-label="{{.Name}}">
+                            <img src="{{.Page.Params.image}}" class="img-fluid p-2" alt="{{.Name}}">
+                        </a>
                     </div>
+                    {{end}}
                 </div>
-                <div id="branding" class="container tab-pane fade">
-                    <ul class="nav nav-pills nav-justified" role="tablist">
-                        <li class="nav-item">
-                            <a class="nav-link active" data-toggle="pill" href="#logo">Logo design</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" data-toggle="pill" href="#logor">Logo redesign</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" data-toggle="pill" href="#graphics">Graphic designs</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" data-toggle="pill" href="#bcards">Business cards</a>
-                        </li>
-                    </ul>
-                    <div class="tab-content mt-3">
-                        <div id="logo" class="container tab-pane active">
-                            <div class="row">
-                                {{range $index, $val := .Site.Taxonomies.tags.logo}}
-                                <div class="col-lg-3 col-md-4 col-4 p-2">
-                                    <a data-fancybox="gallery" href="{{.Page.Params.image}}" aria-label="{{.Name}}">
-                                        <img src="{{.Page.Params.image}}" class="img-fluid" alt="{{.Name}}">
-                                    </a>
-                                </div>
-                                {{end}}
+            </div>
+            <div id="branding" class="tab-pane fade">
+                <ul class="nav nav-pills nav-justified" role="tablist">
+                    <li class="nav-item">
+                        <a class="nav-link active" data-toggle="pill" href="#logo">Logo design</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" data-toggle="pill" href="#logor">Logo redesign</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" data-toggle="pill" href="#graphics">Graphic designs</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" data-toggle="pill" href="#bcards">Business cards</a>
+                    </li>
+                </ul>
+                <div class="tab-content mt-3">
+                    <div id="logo" class="tab-pane active">
+                        <div class="row">
+                            {{range $index, $val := .Site.Taxonomies.tags.logo}}
+                            <div class="col-lg-3 col-md-4 col-4 p-2">
+                                <a data-fancybox="gallery" href="{{.Page.Params.image}}" aria-label="{{.Name}}">
+                                    <img src="{{.Page.Params.image}}" class="img-fluid p-2" alt="{{.Name}}">
+                                </a>
                             </div>
-                        </div>
-                        <div id="logor" class="container tab-pane">
-                            <div class="row">
-                                {{range $index, $val := .Site.Taxonomies.tags.logor}}
-                                <div class="col-lg-3 col-md-4 col-4 p-2">
-                                    <a data-fancybox="gallery" href="{{.Page.Params.image}}" aria-label="{{.Name}}">
-                                        <img src="{{.Page.Params.image}}" class="img-fluid" alt="{{.Name}}">
-                                    </a>
-                                </div>
-                                {{end}}
-                            </div>
-                        </div>
-                        <div id="graphics" class="container tab-pane">
-                            <div class="row">
-                                {{range $index, $val := .Site.Taxonomies.tags.graphics}}
-                                <div class="col-lg-3 col-md-4 col-4 p-2">
-                                    <a data-fancybox="gallery" href="{{.Page.Params.image}}" aria-label="{{.Name}}">
-                                        <img src="{{.Page.Params.image}}" class="img-fluid" alt="{{.Name}}">
-                                    </a>
-                                </div>
-                                {{end}}
-                            </div>
-                        </div>
-                        <div id="bcards" class="container tab-pane">
-                            <div class="row">
-                                {{range $index, $val := .Site.Taxonomies.tags.bcards}}
-                                <div class="col-lg-3 col-md-4 col-4 p-2">
-                                    <a data-fancybox="gallery" href="{{.Page.Params.image}}" aria-label="{{.Name}}">
-                                        <img src="{{.Page.Params.image}}" class="img-fluid" alt="{{.Name}}">
-                                    </a>
-                                </div>
-                                {{end}}
-                            </div>
+                            {{end}}
                         </div>
                     </div>
-                </div>
-                <div id="content" class="container tab-pane fade">
-                    <div class="row">
-                        <div class="col-lg-4 col-md-4 col-4 my-3">
-                            <a href="docs/Coarel_final_content.pdf" target="_blank" rel="noopener"
-                                aria-label="Coarel content">
-                                <img src="images/content/Coarel_logo.jpg" class="img-fluid" alt="Coarel content">
-                            </a>
+                    <div id="logor" class="tab-pane">
+                        <div class="row">
+                            {{range $index, $val := .Site.Taxonomies.tags.logor}}
+                            <div class="col-lg-3 col-md-4 col-4 p-2">
+                                <a data-fancybox="gallery" href="{{.Page.Params.image}}" aria-label="{{.Name}}">
+                                    <img src="{{.Page.Params.image}}" class="img-fluid p-2" alt="{{.Name}}">
+                                </a>
+                            </div>
+                            {{end}}
                         </div>
-                        <div class="col-lg-4 col-md-4 col-4 my-3">
-                            <a href="http://geotattoos.com" target="_blank" rel="noopener"
-                                aria-label="geotattoos content">
-                                <img src="images/geo.png" class="img-fluid" alt="geotattoos website">
-                            </a>
+                    </div>
+                    <div id="graphics" class="tab-pane">
+                        <div class="row">
+                            {{range $index, $val := .Site.Taxonomies.tags.graphics}}
+                            <div class="col-lg-3 col-md-4 col-4 p-2">
+                                <a data-fancybox="gallery" href="{{.Page.Params.image}}" aria-label="{{.Name}}">
+                                    <img src="{{.Page.Params.image}}" class="img-fluid p-2" alt="{{.Name}}">
+                                </a>
+                            </div>
+                            {{end}}
                         </div>
-                        <div class="col-lg-4 col-md-4 col-4 my-3">
-                            <a href="docs/Frontier_forms_brochure_content.pdf" target="_blank" rel="noopener"
-                                aria-label="Frontier_forms_brochure_content content">
-                                <img src="images/content/Frontier_forms_logo.png" class="img-fluid"
-                                    alt="Frontier_forms_brochure_content">
-                            </a>
-                        </div>
-                        <div class="col-lg-4 col-md-4 col-4 my-3">
-                            <a href="docs/Marsala_content.pdf" target="_blank" rel="noopener"
-                                aria-label="Marsala_content">
-                                <img src="images/content/marsala.png" class="img-fluid" alt="Marsala_content">
-                            </a>
-                        </div>
-                        <div class="col-lg-4 col-md-4 col-4 my-3">
-                            <a href="docs/SDC_Content.pdf" target="_blank" rel="noopener" aria-label="SDC content">
-                                <img src="images/content/SDC.png" class="img-fluid" alt="SDC content">
-                            </a>
-                        </div>
-                        <div class="col-lg-4 col-md-4 col-4 my-3">
-                            <a href="docs/SINTAB_content.pdf" target="_blank" rel="noopener"
-                                aria-label="SINTAB content">
-                                <img src="images/SINTAB_dark.png" class="img-fluid" alt="SINTAB content">
-                            </a>
+                    </div>
+                    <div id="bcards" class="tab-pane">
+                        <div class="row">
+                            {{range $index, $val := .Site.Taxonomies.tags.bcards}}
+                            <div class="col-lg-3 col-md-4 col-4 p-2">
+                                <a data-fancybox="gallery" href="{{.Page.Params.image}}" aria-label="{{.Name}}">
+                                    <img src="{{.Page.Params.image}}" class="img-fluid p-2" alt="{{.Name}}">
+                                </a>
+                            </div>
+                            {{end}}
                         </div>
                     </div>
                 </div>
+            </div>
+            <div id="content" class="tab-pane fade">
+                <div class="row mb-2">
+                {{range $index, $val := .Site.Taxonomies.tags.content}}
+                
+                    <div class="col-lg-3 col-md-4 col-4 p-2 mb-2">
+                        <a href="{{.Description}}" target="_blank" rel="noopener" aria-label="{{.Name}}">
+                            <img src="{{.Page.Params.image}}" class="img-fluid p-2" alt="{{.Name}}">
+                        </a>
+                    </div>
+                    {{end}}
+                </div>
+               
             </div>
         </div>
     </div>
@@ -312,7 +282,6 @@
     </div>
 </section>
 {{end}}
-
 {{define "why"}}
 <!-- why TenSKetch -->
 <div class="why position-relative">
@@ -402,7 +371,7 @@
                 <ul class="list-unstyled">
                     <li>Requirement analysis</li>
                     <li>Agreement</li>
-                    <li>Business analysis</li>                  
+                    <li>Business analysis</li>
                 </ul>
                 <!-- <button href="#"><button type="button" class="btn btn-primary btn-lg btn-block">Read now</button></a> -->
             </div>
@@ -414,7 +383,7 @@
                 <ul class="list-unstyled">
                     <li>Design and development</li>
                     <li>Testing</li>
-                    <li>Launch</li>        
+                    <li>Launch</li>
                 </ul>
                 <!-- <button href="#"><button type="button" class="btn btn-primary btn-lg btn-block">Read now</button></a> -->
             </div>
@@ -426,17 +395,14 @@
                 <ul class="list-unstyled">
                     <li>Annual renewal</li>
                     <li>Bug fixes if any</li>
-                    <li>Content updates</li>                 
+                    <li>Content updates</li>
                 </ul>
                 <!-- <button href="#"><button type="button" class="btn btn-primary btn-lg btn-block">Read now</button></a> -->
             </div>
         </div>
-        
     </div>
 </section>
 {{end}}
-
-
 {{define "clients"}}
 <div id="clients" class="container">
     <h1 class="text-center mb-5">Our Clients</h1>

@@ -1,7 +1,8 @@
 @font-face {
   font-family: "enchanting_celebrationsRg";
   src: url("enchanting_celebrations-webfont.woff2") format("woff2"),
-    url("enchanting_celebrations-webfont.woff") format("woff");
+    url("enchanting_celebrations-webfont.woff") format("woff"),
+    url("enchanting_celebrations-webfont.ttf") format("ttf");
   font-weight: normal;
   font-style: normal;
 }
@@ -21,8 +22,9 @@ p {
   letter-spacing: 1.5px;
 }
 li {
-  font-size: 1rem;
+  font-size: 1.1rem;
   line-height: 1.6rem;
+  /* font-family: Georgia, 'Times New Roman', Times, serif; */
 }
 
 a:hover {
@@ -61,12 +63,11 @@ a:hover {
   margin-left: 10rem;
 }
 
-
 .navbar-light .navbar-nav .nav-link {
   color: #000;
   font-size: 1.2rem;
   letter-spacing: 3px;
-  padding: 0 1rem;
+  padding-left: 1rem;
 }
 .navbar-brand img {
   height: 70px;
@@ -94,12 +95,14 @@ a:hover {
 }
 
 #about {
+  background: url(images/2nd-slide.jpg) center no-repeat fixed;
+  background-size: cover;
   height: 100vh;
 }
 
 #services {
   background: #fff;
-  padding-top: 9rem;
+  padding-top: 12rem;
 }
 #services .col-md-6 {
   padding: 6rem 0rem;
@@ -113,9 +116,8 @@ a:hover {
   text-decoration: none;
 }
 
-#portfolio .img-fluid {
+#portfolio img {
   object-fit: cover;
-  height: 150px;
 }
 #portfolio .img-fluid:hover {
   box-shadow: 0 0.5rem 1rem 0 rgba(23, 23, 23, 0.5);
@@ -259,9 +261,9 @@ a:hover {
 .grid {
   position: relative;
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
   grid-template-rows: auto;
-  grid-gap: 0 50px;
+  grid-gap: 0 110px;
   z-index: 5;
 }
 .grid .box {
@@ -296,7 +298,7 @@ a:hover {
   font-size: 10em;
   color: rgba(155, 153, 153, 0.247);
   transition: 0.5s;
-  cursor: pointer
+  cursor: pointer;
 }
 .box:hover .content h2 {
   top: -140px;
@@ -341,8 +343,7 @@ a:hover {
   box-shadow: 0 0 0 0.1rem #fff;
 }
 
-#clients,
-#contact {
+#clients, #contact, #pricing {
   padding-top: 8rem;
 }
 
@@ -484,6 +485,12 @@ a:hover {
 }
 
 /* media queries */
+@media (max-width:991px){
+  .navbar-collapse{
+    text-align: right;
+  }
+
+}
 @media (max-width: 991px) and (min-width: 576px) {
   #pricing .col-sm-6 {
     -ms-flex: 0 0 50%;
@@ -493,9 +500,6 @@ a:hover {
 }
 
 @media (max-width: 768px) {
-  h1 {
-    font-size: 2.1rem !important;
-  }
   .why {
     height: 50vh;
   }
@@ -506,14 +510,14 @@ a:hover {
     filter: invert(0);
   }
   .controls {
-    bottom: 12rem
+    bottom: 12rem;
   }
 }
 
 @media (max-width: 576px) {
   #services {
-    padding-top: 10rem!important;
-    background: #000!important;
+    padding-top: 10rem !important;
+    background: #000 !important;
     color: #fff;
   }
   #services .col-md-6 {
@@ -525,9 +529,6 @@ a:hover {
   }
   .intro i {
     margin-left: 13rem;
-  }
-  h1 {
-    font-size: 1.8rem !important;
   }
   .img-bg {
     display: none;
@@ -551,16 +552,16 @@ a:hover {
   .why::after {
     bottom: 500px;
     opacity: 0.08;
-    font-size: 14vw; 
+    font-size: 14vw;
   }
   .grid .box {
-margin: 2rem;
+    margin: 2rem;
   }
   .controls {
     bottom: 8rem;
     margin-bottom: 3rem;
   }
-  
+
   .content2 {
     flex-direction: column-reverse;
     padding-top: 0;

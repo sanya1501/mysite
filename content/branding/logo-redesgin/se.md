@@ -1,6 +1,6 @@
 ---
 title: "Se"
-image: /images/logo-redesigns/South_East_logo.png
+image: /images/clients/logo-se.png
 tags: ["logor"]
 date: 2020-03-19T19:57:50+05:30
 draft: false
