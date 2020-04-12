@@ -130,19 +130,14 @@
                         <!-- <div class="masonry">
                             {{range $index, $val := .Site.Taxonomies.tags.logor}}
                             <div class="masonry-item">
-                                
-
                                 <div class="masonry-content">
                                     <a data-fancybox="gallery" href="{{.Page.Params.image}}" aria-label="{{.Name}}">
                                         <img class="img-fluid" src="{{.Page.Params.Image}}" alt="{{.Title}}">
                                     </a>
                                 </div>
-                                
                             </div>
                             {{end}}
-
                         </div> -->
-
                         <div class="row">
                             {{range $index, $val := .Site.Taxonomies.tags.logor}}
                             <div class="col-lg-3 col-md-4 col-4 p-2">
@@ -157,17 +152,13 @@
                         <div class="masonry">
                             {{range $index, $val := .Site.Taxonomies.tags.graphics}}
                             <div class="masonry-item">
-                                
-
                                 <div class="masonry-content">
-                                    <a data-fancybox="gallery" href="{{.Page.Params.image}}" aria-label="{{.Name}}">
+                                    <a href="{{.Description}}" target="_blank" rel="noopener" aria-label="{{.Name}}">
                                         <img class="img-fluid" src="{{.Page.Params.Image}}" alt="{{.Title}}">
                                     </a>
                                 </div>
-                                
                             </div>
                             {{end}}
-
                         </div>
                         <!-- <div class="row">
                             {{range $index, $val := .Site.Taxonomies.tags.graphics}}
@@ -196,21 +187,16 @@
                 <div class="masonry">
                     {{range $index, $val := .Site.Taxonomies.tags.content}}
                     <div class="masonry-item">
-                        
-
                         <div class="masonry-content">
                             <a href="{{.Description}}" target="_blank" rel="noopener" aria-label="{{.Name}}">
                                 <img class="img-fluid" src="{{.Page.Params.Image}}" alt="{{.Title}}">
                             </a>
                         </div>
-                        
                     </div>
                     {{end}}
-
                 </div>
                 <!-- <div class="row mb-2">
                     {{range $index, $val := .Site.Taxonomies.tags.content}}
-
                     <div class="col-lg-3 col-md-4 col-4 p-2 mb-2">
                         <a href="{{.Description}}" target="_blank" rel="noopener" aria-label="{{.Name}}">
                             <img src="{{.Page.Params.image}}" class="img-fluid p-2" alt="{{.Name}}">
@@ -218,7 +204,6 @@
                     </div>
                     {{end}}
                 </div> -->
-
             </div>
         </div>
     </div>
