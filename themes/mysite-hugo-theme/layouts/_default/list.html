@@ -1,5 +1,5 @@
 {{define "intro"}}
-<section class="intro parallax">
+<section class="intro">
     <div class="container h-100">
         <div class="row align-items-center h-100">
             <div class="col-md-8 mx-auto">
@@ -71,7 +71,7 @@
 </section>
 {{end}}
 {{define "port"}}
-<section id="portfolio" class="py-5 parallax">
+<section id="portfolio">
     <div class="container">
         <h1 class="text-center my-5 pt-5">portfolio</h1>
         <!-- Nav pills -->
@@ -127,6 +127,22 @@
                         </div>
                     </div>
                     <div id="logor" class="tab-pane">
+                        <!-- <div class="masonry">
+                            {{range $index, $val := .Site.Taxonomies.tags.logor}}
+                            <div class="masonry-item">
+                                
+
+                                <div class="masonry-content">
+                                    <a data-fancybox="gallery" href="{{.Page.Params.image}}" aria-label="{{.Name}}">
+                                        <img class="img-fluid" src="{{.Page.Params.Image}}" alt="{{.Title}}">
+                                    </a>
+                                </div>
+                                
+                            </div>
+                            {{end}}
+
+                        </div> -->
+
                         <div class="row">
                             {{range $index, $val := .Site.Taxonomies.tags.logor}}
                             <div class="col-lg-3 col-md-4 col-4 p-2">
@@ -138,21 +154,36 @@
                         </div>
                     </div>
                     <div id="graphics" class="tab-pane">
-                        <div class="row">
+                        <div class="masonry">
+                            {{range $index, $val := .Site.Taxonomies.tags.graphics}}
+                            <div class="masonry-item">
+                                
+
+                                <div class="masonry-content">
+                                    <a data-fancybox="gallery" href="{{.Page.Params.image}}" aria-label="{{.Name}}">
+                                        <img class="img-fluid" src="{{.Page.Params.Image}}" alt="{{.Title}}">
+                                    </a>
+                                </div>
+                                
+                            </div>
+                            {{end}}
+
+                        </div>
+                        <!-- <div class="row">
                             {{range $index, $val := .Site.Taxonomies.tags.graphics}}
                             <div class="col-lg-3 col-md-4 col-4 p-2">
-                                <a data-fancybox="gallery" href="{{.Page.Params.image}}" aria-label="{{.Name}}">
+                                <a href="{{.Description}}" target="_blank" rel="noopener" aria-label="{{.Name}}">
                                     <img src="{{.Page.Params.image}}" class="img-fluid p-2" alt="{{.Name}}">
                                 </a>
                             </div>
                             {{end}}
-                        </div>
+                        </div> -->
                     </div>
                     <div id="bcards" class="tab-pane">
                         <div class="row">
                             {{range $index, $val := .Site.Taxonomies.tags.bcards}}
                             <div class="col-lg-3 col-md-4 col-4 p-2">
-                                <a data-fancybox="gallery" href="{{.Page.Params.image}}" aria-label="{{.Name}}">
+                                <a href="{{.Description}}" target="_blank" rel="noopener" aria-label="{{.Name}}">
                                     <img src="{{.Page.Params.image}}" class="img-fluid p-2" alt="{{.Name}}">
                                 </a>
                             </div>
@@ -162,17 +193,32 @@
                 </div>
             </div>
             <div id="content" class="tab-pane fade">
-                <div class="row mb-2">
-                {{range $index, $val := .Site.Taxonomies.tags.content}}
-                
+                <div class="masonry">
+                    {{range $index, $val := .Site.Taxonomies.tags.content}}
+                    <div class="masonry-item">
+                        
+
+                        <div class="masonry-content">
+                            <a href="{{.Description}}" target="_blank" rel="noopener" aria-label="{{.Name}}">
+                                <img class="img-fluid" src="{{.Page.Params.Image}}" alt="{{.Title}}">
+                            </a>
+                        </div>
+                        
+                    </div>
+                    {{end}}
+
+                </div>
+                <!-- <div class="row mb-2">
+                    {{range $index, $val := .Site.Taxonomies.tags.content}}
+
                     <div class="col-lg-3 col-md-4 col-4 p-2 mb-2">
                         <a href="{{.Description}}" target="_blank" rel="noopener" aria-label="{{.Name}}">
                             <img src="{{.Page.Params.image}}" class="img-fluid p-2" alt="{{.Name}}">
                         </a>
                     </div>
                     {{end}}
-                </div>
-               
+                </div> -->
+
             </div>
         </div>
     </div>
