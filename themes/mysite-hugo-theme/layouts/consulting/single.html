@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    {{- partial "head.html" . -}}
+    {{- partial "css-s.html" . -}}
+    <style>
+        .content-a {
+            padding: 2rem 1rem;
+            width: 100%;
+            margin: 0 auto;
+            background-color: #fff;
+            border-radius: 10px;
+            box-shadow: 0 5px 10px rgba(154, 160, 185, .05), 0 15px 40px rgba(166, 173, 201, .2);
+            transition: box-shadow .2s ease;
+        }
+        .content-a ol {
+            list-style: none;
+            padding: 0;
+        }
+        .grid-s {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+            grid-gap: 3em;
+        }
+        @media(max-width: 768px) {
+            .content-a {
+                width: 90%;
+                padding: 1rem !important;
+            }
+        }
+    </style>
+</head>
+<body data-spy="scroll" data-target="navbar" data-offset="100">
+    <section class="intro-header m-0 p-0 align-items-center d-flex justify-content-center">
+        <h1 data-text="Consulting" class="m-0 p-0 position-absolute text-white text-center display-3">Consulting
+        </h1>
+    </section>
+    <section class="py-5 my-5">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-6">
+                    <img src="/images/consult.jpg" class="img-fluid" alt="consulting">
+                </div>
+                <div class="col-lg-6">
+                    <div class="content-a">
+                        {{range $index, $val := .Site.Taxonomies.tags.consult}}
+                        {{.Content}}
+                        {{end}}
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    {{- partial "header-s.html" . -}}
+    {{- partial "footer.html" . -}}
+    {{- partial "scripts.html" . -}}
+</body>
+</html>

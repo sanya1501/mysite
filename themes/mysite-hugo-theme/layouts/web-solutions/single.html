@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    {{- partial "head.html" . -}}
+    {{- partial "css-s.html" . -}}
+    <style>
+        .s2 {
+            height: 100vh;
+
+        }
+
+        .s2:nth-child(0) {
+            background: #EBEBEB;
+            height: 100%;
+        }
+
+        .content-a {
+            padding: 2rem 1rem;
+            width: 80%;
+            margin: 0 auto;
+            background-color: #fff;
+            border-radius: 10px;
+            box-shadow: 0 5px 10px rgba(154, 160, 185, .05), 0 15px 40px rgba(166, 173, 201, .2);
+            transition: box-shadow .2s ease;
+        }
+
+        .content-a h2,
+        .content-a p {
+            text-align: center;
+        }
+
+        .content-a ol{
+            list-style: none;
+        }
+
+        .content-a li {
+            line-height: 2rem;
+            text-align: center;
+        }
+
+        @media(max-width: 768px) {
+            .s2:nth-child(2) {
+                height: 120vh;
+            }
+
+            .content-a {
+                width: 90%;
+                padding: 1rem !important;
+            }
+
+            h3 {
+                font-size: 1.4rem;
+            }
+
+          
+        }
+    </style>
+</head>
+
+<body data-spy="scroll" data-target="navbar" data-offset="100">
+    <section class="intro-header m-0 p-0 align-items-center d-flex justify-content-center">
+        <h1 data-text="Web Solutions" class="m-0 p-0 position-absolute text-white text-center display-3">Web Solutions
+        </h1>
+    </section>
+    <section class="s2 d-flex align-items-center">
+        <div class="container">
+            <div class="content-a">
+                {{range $index, $val := .Site.Taxonomies.tags.web}}
+                {{.Content}}
+                {{end}}
+            </div>
+        </div>
+    </section>
+    <section id="portfolio">
+        <div class="container">
+            <h1 class="text-center mb-5">Websites portfolio</h1>
+            <div class="row">
+                {{range $index, $val := .Site.Taxonomies.tags.websites}}
+                <div class="col-lg-4 col-md-4 col-4 my-3">
+                    <a href="{{.Description}}" target="_blank" rel="noopener" aria-label="{{.Name}}">
+                        <img src="{{.Page.Params.image}}" class="img-fluid p-2" alt="{{.Name}}">
+                    </a>
+                </div>
+                {{end}}
+            </div>
+
+        </div>
+    </section>
+    <section id="pricing">
+        <div class="container">
+            <h2 class="text-center mb-5">Pricing</h2>
+            <!-- Content here -->
+            <div class="row text-center">
+                <div class="col-sm-6 col-md-3">
+                    <div class="price-table">
+                        <div class="price-head">
+                            <h4>Start-up</h4>
+                            <h2>₹6,990</h2>
+                        </div>
+                        <div class="price-content position-relative mt-2">
+                            <ul class="list-unstyled">
+                                <li>Static website</li>
+                                <li>one page</li>
+                                <li>Domain name*</li>
+                                <li>1 form</li>
+                                <li>Content proofreading</li>
+                                <li class="text-muted">Basic SEO</li>
+                                <li class="text-muted">Google and FB pages
+                                    creation**</li>
+                                <li class="text-muted">Google Analytics</li>
+                                <!-- <li class="text-muted">Monthly Status Reports</li> -->
+                            </ul>
+                        </div>
+                        <!--<a href="#"><button type="button" class="btn btn-primary btn-lg btn-block mb-3">Book
+                                now</button></a>-->
+                    </div>
+                </div>
+                <div class="col-sm-6 col-md-3">
+                    <div class="price-table">
+                        <div class="price-head">
+                            <h4>Corporate</h4>
+                            <h2>₹10,990</h2>
+                        </div>
+                        <div class="price-content position-relative mt-2">
+                            <ul class="list-unstyled">
+                                <li>Static website</li>
+                                <li>upto 3 pages</li>
+                                <li>Domain name*</li>
+                                <li>2 forms</li>
+                                <li>Content proofreading</li>
+                                <li>Basic SEO</li>
+                                <li class="text-muted">Google and FB pages
+                                    creation**</li>
+                                <li class="text-muted">Google Analytics</li>
+                                <!-- <li class="text-muted">Monthly Status Reports</li> -->
+                            </ul>
+                        </div>
+                        <!--<a href="#"><button type="button" class="btn btn-primary btn-lg btn-block mb-3">Book
+                                now</button></a>-->
+                    </div>
+                </div>
+                <div class="col-sm-6 col-md-3">
+                    <div class="price-table">
+                        <div class="price-head">
+                            <h4>Custom</h4>
+                            <h2>₹15,990</h2>
+                        </div>
+                        <div class="price-content position-relative mt-2">
+                            <ul class="list-unstyled">
+                                <li>Dynamic website</li>
+                                <li>upto 5 pages</li>
+                                <li>Domain name*</li>
+                                <li>2 forms</li>
+                                <li>Content writing</li>
+                                <li>Basic SEO</li>
+                                <li>Google and FB pages creation**</li>
+                                <li class="text-muted">Google Analytics</li>
+                                <!-- <li class="text-muted">Monthly Status Reports</li> -->
+                            </ul>
+                        </div>
+                        <!--<a href="#"><button type="button" class="btn btn-primary btn-lg btn-block mb-3">Book
+                                now</button></a>-->
+                    </div>
+                </div>
+                <div class="col-sm-6 col-md-3">
+                    <div class="price-table">
+                        <div class="price-head">
+                            <h4>Special</h4>
+                            <h2>₹21,990</h2>
+                        </div>
+                        <div class="price-content position-relative mt-2">
+                            <ul class="list-unstyled">
+                                <li>Dynamic website</li>
+                                <li>upto 7 pages</li>
+                                <li>Domain name*</li>
+                                <li>no. of forms as per needs</li>
+                                <li>Content writing</li>
+                                <li>Basic SEO</li>
+                                <li>Google and FB pages creation**</li>
+                                <li>Google Analytics</li>
+                                <!-- <li class="text-muted">Monthly Status Reports</li> -->
+                            </ul>
+                        </div>
+                        <!--<a href="#"><button type="button" class="btn btn-primary btn-lg btn-block mb-3">Book
+                                now</button></a>-->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    {{- partial "header-s.html" . -}}
+    {{- partial "footer.html" . -}}
+    {{- partial "scripts.html" . -}}
+</body>
+
+</html>

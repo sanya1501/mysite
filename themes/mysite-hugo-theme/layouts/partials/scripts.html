@@ -1,70 +1,74 @@
-.
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/js/bootstrap.min.js"></script>
-  <script>
-    // navbar change bg and shrink on scroll and animated on scroll
-    $(window).scroll(function () {
-      if ($(document).scrollTop() > 100) {
-        $('.navbar').addClass('affix animated fadeInDown');
-      } else {
-        $('.navbar').removeClass('affix animated fadeInDown');
-      }
-    });
-  </script>
-  <script>
-     //hide navbar after click
-     $(".navbar-nav li a:not('.dropdown-toggle')").on('click', function () {
-      $('.navbar-collapse').collapse('hide');
-    });
-  </script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick.js"></script>
-  <script>
-    $(document).ready(function(){
-  $('.customer-logos').slick({
-    slidesToShow: 6,
-    slidesToScroll: 1,
-    autoplay: true,
-    autoplaySpeed: 1000,
-    arrows: false,
-    dots: false,
-    pauseOnHover: false,
-    responsive: [{
-      breakpoint: 768,
-      settings: {
-        slidesToShow: 4
-      }
-    }, {
-      breakpoint: 520,
-      settings: {
-        slidesToShow: 3
-      }
-    }]
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/js/bootstrap.min.js"></script>
+<script>
+  // navbar change bg and shrink on scroll and animated on scroll
+  $(window).scroll(function () {
+    if ($(document).scrollTop() > 100) {
+      $('.navbar').addClass('affix animated fadeInDown');
+    } else {
+      $('.navbar').removeClass('affix animated fadeInDown');
+    }
   });
-});
-  </script>
-  <!-- Scroll to top--> 
-  <script>
-    $(window).scroll(function () {
-      var height = $(window).scrollTop();
-      if (height > 100) {
-        $('#back2Top').fadeIn();
-      } else {
-        $('#back2Top').fadeOut();
-      }
-    });
-    $(document).ready(function () {
-      $("#back2Top").click(function (event) {
-        event.preventDefault();
-        $("html, body").animate({ scrollTop: 0 });
-        return false;
-      });
-    });
-  </script>
-  <!-- tooltip title -->
-  <a id="back2Top" title="Back to top" href="#">&#10148;</a>
-  <script>
-  $('#link').hover(function(){
-      $('#title').text($('#link').attr('title'));
+</script>
+<script>
+  //hide navbar after click
+  $(".navbar-nav li a:not('.dropdown-toggle')").on('click', function () {
+    $('.navbar-collapse').collapse('hide');
   });
-  </script>
+</script>
+<script src="https://cdn.jsdelivr.net/npm/lozad/dist/lozad.min.js"></script>
+<script>
+  const observer = lozad(); // lazy loads elements with default selector as '.lozad'
+  observer.observe();
+</script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick.js"></script>
+<script>
+  $(document).ready(function () {
+    $('.customer-logos').slick({
+      slidesToShow: 6,
+      slidesToScroll: 1,
+      autoplay: true,
+      autoplaySpeed: 1000,
+      arrows: false,
+      dots: false,
+      pauseOnHover: false,
+      responsive: [{
+        breakpoint: 768,
+        settings: {
+          slidesToShow: 4
+        }
+      }, {
+        breakpoint: 520,
+        settings: {
+          slidesToShow: 3
+        }
+      }]
+    });
+  });
+</script>
+<!-- Scroll to top-->
+<script>
+  $(window).scroll(function () {
+    var height = $(window).scrollTop();
+    if (height > 100) {
+      $('#back2Top').fadeIn();
+    } else {
+      $('#back2Top').fadeOut();
+    }
+  });
+  $(document).ready(function () {
+    $("#back2Top").click(function (event) {
+      event.preventDefault();
+      $("html, body").animate({ scrollTop: 0 });
+      return false;
+    });
+  });
+</script>
+<!-- tooltip title -->
+<a id="back2Top" title="Back to top" href="#">&#10148;</a>
+<script>
+  $('#link').hover(function () {
+    $('#title').text($('#link').attr('title'));
+  });
+</script>

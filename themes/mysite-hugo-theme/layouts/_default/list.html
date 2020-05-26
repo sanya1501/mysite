@@ -6,7 +6,7 @@
                 <img src="images/logo.png" class="animated fadeInUp slow" alt="TenSketch logo">
             </div>
             <div class="col-md-8 mx-auto">
-                <a href="#services">
+                <a href="#services" aria-label="land (jump) to services section">
                     <i class="fas fa-chevron-down animated fadeInDown delay-2s fa-3x"></i>
                 </a>
             </div>
@@ -16,17 +16,18 @@
 {{define "about"}}
 <section id="about">
     <div class="container h-100">
+        {{range $index, $val := .Site.Taxonomies.tags.about}}
         <div class="row align-items-center h-100 text-center">
             <div class="col-md-8 mx-auto">
                 <h1 class="mb-3">About us</h1>
                 <p>
-                    TenSketch was founded on 28 August 2017. We provide holistic business solutions to various sectors
-                    of the business world. Our core values are minimalism and organized work. We specialize in creating
-                    fast and powerful web solutions using reliable open source technologies. We create powerful messages
-                    through our dynamic content writing and branding team.
+                    {{.Summary}}
                 </p>
+                <a href="{{.Site.BaseURL}}about/us"><button type="button" class="btn btn-primary btn-lg">Read
+                        more</button></a>
             </div>
         </div>
+        {{end}}
     </div>
 </section>
 {{end}}
@@ -36,35 +37,35 @@
         <h1 class="mb-5">Services</h1>
         <div class="row align-items-center h-100">
             <div class="col-md-6 img-bg">
-                <img src="images/website-256.png" class="img-fluid" alt="">
+                <img data-src="images/website-256.png" class="img-fluid lozad" alt="">
             </div>
             <div class="col-md-6 web">
-                <!-- <a href=""> -->
                 <h2>sketches websites</h2>
-                <img src="images/website-256.png" class="img-fluid" alt="">
-                <!-- </a> -->
+                <img data-src="images/website-256.png" class="img-fluid lozad" alt="">
+                <a href="{{.Site.BaseURL}}web-solutions/website-designing-and-development/"><button type="button" class="btn btn-primary btn-lg">Read
+                        more</button></a>
             </div>
         </div>
         <div class="row align-items-center h-100">
             <div class="col-md-6 web">
-                <!-- <a href=""> -->
                 <h2>brands your organization</h2>
-                <img src="images/branding-256.png" class="img-fluid" alt="">
-                <!-- </a> -->
+                <img data-src="images/branding-256.png" class="img-fluid lozad" alt="">
+                <a href="{{.Site.BaseURL}}branding-services/branding-logo-graphics-designing/"><button type="button" class="btn btn-primary btn-lg">Read
+                        more</button></a>
             </div>
             <div class="col-md-6 img-bg">
-                <img src="images/branding-256.png" class="img-fluid" alt="">
+                <img data-src="images/branding-256.png" class="img-fluid lozad" alt="">
             </div>
         </div>
         <div class="row align-items-center h-100">
             <div class="col-md-6 img-bg">
-                <img src="images/content-256.png" class="img-fluid" alt="">
+                <img data-src="images/content-256.png" class="img-fluid lozad" alt="">
             </div>
             <div class="col-md-6 web">
-                <!-- <a href=""> -->
                 <h2>writes content</h2>
-                <img src="images/content-256.png" class="img-fluid" alt="">
-                <!-- </a> -->
+                <img data-src="images/content-256.png" class="img-fluid lozad" alt="">
+                <a href="{{.Site.BaseURL}}content-writing-services/and-proofreading/"><button type="button" class="btn btn-primary btn-lg">Read
+                        more</button></a>
             </div>
         </div>
     </div>
@@ -77,13 +78,13 @@
         <!-- Nav pills -->
         <ul class="nav nav-pills nav-justified" role="tablist">
             <li class="nav-item">
-                <a class="nav-link active" data-toggle="pill" href="#website">websites</a>
+                <a class="nav-link active" data-toggle="pill" href="#website" role="tab">websites</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" data-toggle="pill" href="#branding">branding</a>
+                <a class="nav-link" data-toggle="pill" href="#branding" role="tab">branding</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" data-toggle="pill" href="#content">content</a>
+                <a class="nav-link" data-toggle="pill" href="#content" role="tab">content</a>
             </li>
         </ul>
         <!-- Tab panes -->
@@ -102,16 +103,16 @@
             <div id="branding" class="tab-pane fade">
                 <ul class="nav nav-pills nav-justified" role="tablist">
                     <li class="nav-item">
-                        <a class="nav-link active" data-toggle="pill" href="#logo">Logo design</a>
+                        <a class="nav-link active" data-toggle="pill" href="#logo" role="tab">Logo design</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" data-toggle="pill" href="#logor">Logo redesign</a>
+                        <a class="nav-link" data-toggle="pill" href="#logor" role="tab">Logo redesign</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" data-toggle="pill" href="#graphics">Graphic designs</a>
+                        <a class="nav-link" data-toggle="pill" href="#graphics" role="tab">Graphic designs</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" data-toggle="pill" href="#bcards">Business cards</a>
+                        <a class="nav-link" data-toggle="pill" href="#bcards" role="tab">Business cards</a>
                     </li>
                 </ul>
                 <div class="tab-content mt-3">
@@ -235,8 +236,8 @@
                             <!-- <li class="text-muted">Monthly Status Reports</li> -->
                         </ul>
                     </div>
-                    <a href="#"><button type="button" class="btn btn-primary btn-lg btn-block mb-3">Book
-                            now</button></a>
+                    <!--<a href="#"><button type="button" class="btn btn-primary btn-lg btn-block mb-3">Book
+                            now</button></a>-->
                 </div>
             </div>
             <div class="col-sm-6 col-md-3">
@@ -259,8 +260,8 @@
                             <!-- <li class="text-muted">Monthly Status Reports</li> -->
                         </ul>
                     </div>
-                    <a href="#"><button type="button" class="btn btn-primary btn-lg btn-block mb-3">Book
-                            now</button></a>
+                    <!--<a href="#"><button type="button" class="btn btn-primary btn-lg btn-block mb-3">Book
+                            now</button></a>-->
                 </div>
             </div>
             <div class="col-sm-6 col-md-3">
@@ -282,8 +283,8 @@
                             <!-- <li class="text-muted">Monthly Status Reports</li> -->
                         </ul>
                     </div>
-                    <a href="#"><button type="button" class="btn btn-primary btn-lg btn-block mb-3">Book
-                            now</button></a>
+                    <!--<a href="#"><button type="button" class="btn btn-primary btn-lg btn-block mb-3">Book
+                            now</button></a>-->
                 </div>
             </div>
             <div class="col-sm-6 col-md-3">
@@ -305,8 +306,8 @@
                             <!-- <li class="text-muted">Monthly Status Reports</li> -->
                         </ul>
                     </div>
-                    <a href="#"><button type="button" class="btn btn-primary btn-lg btn-block mb-3">Book
-                            now</button></a>
+                    <!--<a href="#"><button type="button" class="btn btn-primary btn-lg btn-block mb-3">Book
+                            now</button></a>-->
                 </div>
             </div>
         </div>
@@ -339,10 +340,10 @@
             </div>
         </div>
         <div class="bannerImg position-relative" id="slideshow">
-            <img src="images/goals-1.jpg" class="img-fluid active" alt="goal oriented approach">
-            <img src="images/devops.png" class="img-fluid" alt="devops">
-            <img src="images/original-design.jpg" class="img-fluid" alt="original-design">
-            <img src="images/high-performance-websites.jpg" class="img-fluid" alt="high-performance-websites">
+            <img data-src="images/goals-1.jpg" class="img-fluid lozad active" alt="goal oriented approach">
+            <img data-src="images/devops.png" class="img-fluid lozad" alt="devops">
+            <img data-src="images/original-design.jpg" class="img-fluid lozad" alt="original-design">
+            <img data-src="images/high-performance-websites.jpg" class="img-fluid lozad" alt="high-performance-websites">
         </div>
     </div>
     <div class="icons d-flex justify-content-between align-items-center">
@@ -439,8 +440,8 @@
     <h1 class="text-center mb-5">Our Clients</h1>
     <section class="customer-logos slider">
         {{range $index, $val := .Site.Taxonomies.tags.clients}}
-        <div class="slide">
-            <img src="{{.Page.Params.image}}" alt="{{.Name}}">
+        <div class="slide" aria-controls="auto slider of clients section">
+            <img data-src="{{.Page.Params.image}}" class="img-fluid lozad" alt="{{.Name}}">
         </div>
         {{end}}
     </section>

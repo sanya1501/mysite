@@ -6,10 +6,13 @@
   font-weight: normal;
   font-style: normal;
 }
-html,
-body {
-  overflow-x: hidden;
+html{
   scroll-behavior: smooth;
+  
+}
+html, body {
+  overflow-x: hidden;
+  
   -webkit-font-smoothing: antialiased;
   margin: 0;
   padding: 0;
@@ -70,12 +73,15 @@ a:hover {
   font-size: 1.2rem;
   letter-spacing: 3px;
   padding-left: 1rem;
+  font-family: "enchanting_celebrationsRg";
 }
 .navbar-brand img {
   height: 70px;
 }
-.nav-link {
+
+.nav-pills .nav-link{
   color: #000;
+
 }
 .nav-pills .nav-link.active,
 .nav-pills .show > .nav-link {
@@ -131,7 +137,7 @@ a:hover {
 .masonry-item {
   display: inline-block;
   vertical-align: top;
-  margin-bottom: 2rem;
+  margin: 1.5rem;
 }
 @media only screen and (max-width: 1023px) and (min-width: 768px) {
   .masonry {
@@ -154,7 +160,11 @@ a:hover {
 .masonry-item:hover {
   filter: drop-shadow(0px 5px 5px rgba(0, 0, 0, 0.3));
 }
-
+@media (max-width: 600px) {
+  .masonry {
+    columns: 2;
+  }
+}
 .btn.focus,
 .btn:focus {
   box-shadow: 0px 0px 10px 2px rgba(0, 0, 0, 0.75);
@@ -479,10 +489,32 @@ a:hover {
 .slick-arrow.slick-hidden {
   display: none;
 }
+
+#contact{
+  background-color: #5f5f5f;
+  color: #fff;
+}
+#contact a{
+
+  color: rgb(126, 220, 248)
+}
+#contact a:hover{
+
+  color: #fff
+}
+del{
+  cursor: pointer;
+}
 .social ul li {
   margin-right: 1rem;
 }
 
+.wa{
+  height: 20px;
+}
+.goo{
+  height: 28px;
+}
 .bottom-footer {
   background: #212121;
   color: #fff;
@@ -549,6 +581,10 @@ a:hover {
 }
 
 @media (max-width: 576px) {
+  p {
+    font-size: 1rem;
+    line-height: 1.5rem;
+  }
   #services {
     padding-top: 10rem !important;
     background: #000 !important;

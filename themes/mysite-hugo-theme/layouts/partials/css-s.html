@@ -1,0 +1,38 @@
+<style>
+    .intro-header {
+        background: radial-gradient(#000, #EDEDED);
+        height: 70vh;
+        position: relative;
+    }
+
+    .intro-header h1 {
+        position: absolute;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        word-spacing: 0.8rem;
+    }
+
+    .intro-header h1::before {
+        content: attr(data-text);
+        position: absolute;
+        top: 0;
+        left: 0;
+        transform-origin: bottom;
+        transform: rotate(180deg);
+        line-height: 1.05em;
+        background: linear-gradient(0deg, #f0f0ff 0, transparent 80%);
+        background-clip: text;
+        -webkit-background-clip: text;
+        color: transparent;
+        opacity: .5;
+    }
+
+    @media(max-width: 768px) {
+        .intro-header h1 {
+            font-size: 2.5rem
+        }
+    }
+    #portfolio, #works{
+        padding-top: 8rem;
+    }
+</style>

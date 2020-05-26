@@ -1,9 +1,9 @@
 baseURL = "https://www.tensketch.com/"
 languageCode = "en-us"
-title = "TenSketch-Web_design-branding-content-consult"
+title = "Web designing | branding | content writing company in Chennai | TenSketch"
 theme = "mysite-hugo-theme"
 [params]
-description = "Website designing, development, branding content writing and consulting firm in Chennai."
-keywords = "website designing, website designer, website development, web designing, web designer, web development, web developer, logo designing, poster making, video making, social media management, Google business page creation, Facebook company page creation, twitter pages, LinkedIn pages, Management consulting, content writing, School websites, educational institution websites, colleges websites, health website specialists, hospital website development, low cost website designers in Chennai, best web designers in Chennai, high quality website developers, web application providers E-commerce websites, shopping websites, static websites, dynamic websites, invoice solutions, excel invoice, MS excel invoice, low cost invoice software, invoice software"
+description = "Chennai's first an best Web designing, development, branding, content writing company with consulting touch."
+keywords = "website designing, website designer, website development, web designing, web designer, web development, web developer, logo designing, logo designers, poster desiging,brochure desiging, social media management, Google business page creation, Facebook company page creation, content writing,  content writers, SEO Content writers, School websites, educational institution websites, colleges websites, health website specialists, hospital website development, low cost website designers in Chennai, best web designers in Chennai, high quality website developers, web application providers E-commerce websites, shopping websites, static websites, dynamic websites, invoice solutions, excel invoice, MS excel invoice, low cost invoice software, invoice software"
 author = "Balachandiran - TenSketch"
 og_image = "/images/ogimage.jpg"

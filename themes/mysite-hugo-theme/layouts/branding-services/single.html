@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    {{- partial "head.html" . -}}
+    {{- partial "css-s.html" . -}}
+    <style>
+        .content-a {
+            padding: 2rem 1rem;
+            width: 80%;
+            margin: 0 auto;
+            background-color: #fff;
+            border-radius: 10px;
+            box-shadow: 0 5px 10px rgba(154, 160, 185, .05), 0 15px 40px rgba(166, 173, 201, .2);
+            transition: box-shadow .2s ease;
+        }
+
+        .content-a h2,
+        .content-a p {
+            text-align: center;
+        }
+
+        .services h1{
+            text-align: center;
+            margin-bottom: 3rem;
+        }
+
+        .grid-s {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            grid-gap: 3em;
+
+        }
+
+        .grid-s h3 {
+            text-align: center;
+            align-items: center;
+            justify-content: center;
+            display: flex;
+            padding: 2rem;
+            background-color: #fff;
+            border-radius: 10px;
+            box-shadow: 0 5px 10px rgba(154, 160, 185, .05), 0 15px 40px rgba(166, 173, 201, .2);
+            transition: box-shadow .2s ease;
+        }
+
+        @media(max-width: 768px) {
+            .content-a {
+                width: 90%;
+                padding: 1rem !important;
+            }
+        }
+    </style>
+</head>
+
+<body data-spy="scroll" data-target="navbar" data-offset="100">
+    <section class="intro-header m-0 p-0 align-items-center d-flex justify-content-center">
+        <h1 data-text="Branding" class="m-0 p-0 position-absolute text-white text-center display-3">Branding
+        </h1>
+    </section>
+    <section class="vh-100 d-flex align-items-center">
+        <div class="container">
+            <div class="content-a">
+                {{range $index, $val := .Site.Taxonomies.tags.branding}}
+                {{.Content}}
+                {{end}}
+            </div>
+        </div>
+    </section>
+    <section class="services d-flex align-items-center justify-content-center mb-5 ">
+        <div class="container">
+            <h1 class="text-center">Services</h1>
+            <div class="grid-s">
+                {{range $index, $val := .Site.Taxonomies.tags.brandservs}}
+                {{.Content}}
+                {{end}}
+            </div>
+        </div>
+    </section>
+    <section id="portfolio">
+        <div class="container">
+            <h1 class="text-center mb-5">Branding portfolio</h1>
+            <ul class="nav nav-pills nav-justified" role="tablist">
+                <li class="nav-item">
+                    <a class="nav-link active" data-toggle="pill" href="#logo" role="tab">Logo design</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" data-toggle="pill" href="#logor" role="tab">Logo redesign</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" data-toggle="pill" href="#graphics" role="tab">Graphic designs</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" data-toggle="pill" href="#bcards" role="tab">Business cards</a>
+                </li>
+            </ul>
+            <div class="tab-content mt-3">
+                <div id="logo" class="tab-pane active">
+                    <div class="row">
+                        {{range $index, $val := .Site.Taxonomies.tags.logo}}
+                        <div class="col-lg-3 col-md-4 col-4 p-2">
+                            <a data-fancybox="gallery" href="{{.Page.Params.image}}" aria-label="{{.Name}}">
+                                <img src="{{.Page.Params.image}}" class="img-fluid p-2" alt="{{.Name}}">
+                            </a>
+                        </div>
+                        {{end}}
+                    </div>
+                </div>
+                <div id="logor" class="tab-pane">
+                    <!-- <div class="masonry">
+                            {{range $index, $val := .Site.Taxonomies.tags.logor}}
+                            <div class="masonry-item">
+                                <div class="masonry-content">
+                                    <a data-fancybox="gallery" href="{{.Page.Params.image}}" aria-label="{{.Name}}">
+                                        <img class="img-fluid" src="{{.Page.Params.Image}}" alt="{{.Title}}">
+                                    </a>
+                                </div>
+                            </div>
+                            {{end}}
+                        </div> -->
+                    <div class="row">
+                        {{range $index, $val := .Site.Taxonomies.tags.logor}}
+                        <div class="col-lg-3 col-md-4 col-4 p-2">
+                            <a data-fancybox="gallery" href="{{.Page.Params.image}}" aria-label="{{.Name}}">
+                                <img src="{{.Page.Params.image}}" class="img-fluid p-2" alt="{{.Name}}">
+                            </a>
+                        </div>
+                        {{end}}
+                    </div>
+                </div>
+                <div id="graphics" class="tab-pane">
+                    <div class="masonry">
+                        {{range $index, $val := .Site.Taxonomies.tags.graphics}}
+                        <div class="masonry-item">
+                            <div class="masonry-content">
+                                <a href="{{.Description}}" target="_blank" rel="noopener" aria-label="{{.Name}}">
+                                    <img class="img-fluid" src="{{.Page.Params.Image}}" alt="{{.Title}}">
+                                </a>
+                            </div>
+                        </div>
+                        {{end}}
+                    </div>
+                    <!-- <div class="row">
+                            {{range $index, $val := .Site.Taxonomies.tags.graphics}}
+                            <div class="col-lg-3 col-md-4 col-4 p-2">
+                                <a href="{{.Description}}" target="_blank" rel="noopener" aria-label="{{.Name}}">
+                                    <img src="{{.Page.Params.image}}" class="img-fluid p-2" alt="{{.Name}}">
+                                </a>
+                            </div>
+                            {{end}}
+                        </div> -->
+                </div>
+                <div id="bcards" class="tab-pane">
+                    <div class="row">
+                        {{range $index, $val := .Site.Taxonomies.tags.bcards}}
+                        <div class="col-lg-3 col-md-4 col-4 p-2">
+                            <a href="{{.Description}}" target="_blank" rel="noopener" aria-label="{{.Name}}">
+                                <img src="{{.Page.Params.image}}" class="img-fluid p-2" alt="{{.Name}}">
+                            </a>
+                        </div>
+                        {{end}}
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    {{- partial "header-s.html" . -}}
+    {{- partial "footer.html" . -}}
+    {{- partial "scripts.html" . -}}
+</body>
+
+</html>

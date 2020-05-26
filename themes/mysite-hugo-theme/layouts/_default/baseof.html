@@ -1,23 +1,16 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
     {{- partial "head.html" . -}}
 </head>
 <body data-spy="scroll" data-target="navbar" data-offset="100">
     {{- block "intro" . }}{{- end }}
-    {{- partial "header.html" . -}}
     {{- block "about" . }}{{- end }}
     {{- block "services" . }}{{- end }}
-    {{- block "port" . }}{{- end }}
-    {{- block "pricing" . }}{{- end }}
     {{- block "why" . }}{{- end }}
     {{- block "approach" . }}{{- end }}
-    <!-- about -->
-    
-    
     {{- block "clients" . }}{{- end }}
-    
-    <!-- about -->
+    {{- partial "header.html" . -}}
     {{- partial "footer.html" . -}}
     {{- partial "scripts.html" . -}}
 </body>

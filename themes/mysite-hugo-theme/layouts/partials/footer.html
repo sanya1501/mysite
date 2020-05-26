@@ -1,26 +1,47 @@
-<section id="contact">
+<footer id="contact">
     <div class="container d-flex h-100">
         <div class="row h-100 justify-content-center">
-            <div class="col-lg-4 col-md-12">
-                <img src="/images/logo.png" alt="" class="img-fluid">
-                <p>{{ .Site.Params.Description }}</p>
-            </div>
             <div class="col-lg-3 col-md-12">
+                <h3 class="my-3">Links</h3>
+                <ul class="list-unstyled mb-0">
+                    <li class="mb-2">
+                        <a class="foot-link" href="{{.Site.BaseURL}}about/us">About us</a>
+                    </li>
+                    <li class="mb-2">
+                        <a class="foot-link" href="{{.Site.BaseURL}}consulting/for-content-and-business/">Consulting</a>
+                    </li>
+                </ul>
+
+                <h4 class="my-3">Portfolio</h4>
+                <ul class="list-unstyled mb-0">
+                    <li class="mb-2">
+                        <a class="foot-link"
+                            href="{{.Site.BaseURL}}web-solutions/website-designing-and-development/#portfolio">Website
+                            designing</a>
+                    </li>
+                    <li class="mb-2">
+                        <a class="foot-link"
+                            href="{{.Site.BaseURL}}branding-services/branding-logo-graphics-designing/#portfolio">Branding</a>
+                    </li>
+                    <li class="mb-2">
+                        <a class="foot-link"
+                            href="{{.Site.BaseURL}}content-writing-services/and-proofreading/#works">Content writing</a>
+                    </li>
+                </ul>
+
+
+
+            </div>
+            <div class="col-lg-4 col-md-12">
+                <!-- <img src="/images/logo.png" alt="" class="img-fluid"> -->
+                <p>If your business needs branding, a website, or contents we are here for you. On the other hand, if
+                    you are doing well already; we will make you reach further heights by consulting your organization.
+                </p>
                 <h3 class="my-3">Reach us</h3>
-                <!-- <address><i class="fa fa-map-marker mr-2" aria-hidden="true"></i><b>Office Address:</b><br>
-                    HIG #3 NH 1, M.G.R Salai,<br>
-                    Maraimalai Nagar,<br>
-                    Chengalpattu district, TN-603 209.</address> -->
                 <ul class="list-unstyled mb-0">
                     <li class="mb-2">
                         <i class="fa fa-mobile mr-2"></i>
-                        <a href="tel:9840166419" title="call"
-                            aria-label="TenSketch mobile number">+91-9840166419</a>
-                    </li>
-                    <li class="mb-2">
-                        <i class="fa fa-mobile mr-2"></i>
-                        <a href="tel:7010633516" title="call"
-                            aria-label="TenSketch mobile number">+91-7010633516</a>
+                        <a href="tel:9840166419" title="call" aria-label="TenSketch mobile number">+91-9840166419</a>
                     </li>
                     <li class="mb-2">
                         <i class="fa fa-envelope mr-2"></i>
@@ -30,6 +51,12 @@
                 </ul>
                 <div class="social mt-3">
                     <ul class="list-unstyled d-flex">
+                        <li>
+                            <a href="https://wa.me/917010633516" target="_blank" rel="noopener"
+                                title="send a whatsapp message" aria-label="send whatsapp message">
+                                <img src="/images/whatsapp_logo-1.png" class="img-fluid wa mb-1" alt="whatsapp_logo">
+                            </a>
+                        </li>
                         <li>
                             <a href="https://www.facebook.com/tensketch285/" target="_blank" rel="noopener"
                                 aria-label="fb page of TenSketch"><i class="fab fa-facebook"></i></a>
@@ -42,21 +69,23 @@
                             <a href="https://www.facebook.com/tensketch285/" target="_blank" rel="noopener"
                                 aria-label="twitter page of TenSketch"><i class="fab fa-twitter"></i></a>
                         </li> -->
-                        <li>
-                            <a href="https://www.youtube.com/channel/UCa3k-JV9xA6ncMGKaZCyU-Q?view_as=subscriber" target="_blank" rel="noopener"
-                                aria-label="fb page of TenSketch"><i class="fab fa-youtube"></i></a>
+                        <li class="mr-2">
+                            <a href="https://www.youtube.com/channel/UCa3k-JV9xA6ncMGKaZCyU-Q?view_as=subscriber"
+                                target="_blank" rel="noopener" aria-label="fb page of TenSketch"><i
+                                    class="fab fa-youtube"></i></a>
                         </li>
                         <li>
                             <a href="https://g.page/Website-designers-Chennai?share" target="_blank" rel="noopener"
                                 aria-label="google business page link of TenSketch"
-                                title="find location in google business page"><i class="fab fa-google"
-                                    aria-hidden="true"></i></a>
+                                title="find location in google business page"><img src="/images/google_logo.png"
+                                    class="img-fluid goo pb-1" alt="google_logo"></a>
                         </li>
                     </ul>
                 </div>
             </div>
-            <div class="col-lg-5 col-md-12">
-                <h3 class="my-3">Write to us</h3>
+            <div class="col-lg-5 col-md-12 mb-5">
+                <h4 class="my-3">We are waiting to work with you. Drop-in your details for a <del
+                        title="Stay safe at Home">cup of coffee</del> <ins>zoom meeting</ins>.</h4>
                 <form name="Contact" method="POST" data-netlify="true" data-netlify-recaptcha="true">
                     <div class="form-group">
                         <label style="text-align:left" for="name">Name</label>
@@ -79,17 +108,18 @@
                             aria-label="message" spellcheck="false" required></textarea>
                     </div>
                     <div data-netlify-recaptcha="true" class="recaptcha"></div>
-                    <input type="submit" class="btn btn-primary btn-block mt-3" value="Submit" aria-label="Submit button">
+                    <input type="submit" class="btn btn-primary btn-block mt-3" value="Submit"
+                        aria-label="Submit button">
                 </form>
             </div>
         </div>
     </div>
-</section>
+</footer>
 <!-- Copyrights -->
-<section class="bottom-footer mt-3">
+<footer class="bottom-footer">
     <div class="container">
         <p class="text-center mb-0">Copyright &copy;
             <script>document.write(new Date().getFullYear());</script>&nbsp;<a href="https://www.tensketch.com/"
                 aria-label="TenSketch website developer company link">TenSketch</a></p>
     </div>
-</section>
+</footer>
