@@ -8,7 +8,7 @@ description: "High performance and Minimalistic website designs"
 keywords: "website designing, website designer, website development, web designing, web designer, web development, web developer, website designing company in Chennai, website designers company in Chennai, web designing company in Chennai, web designers company in Chennai, website development company in Chennai, website developers company in Chennai, web development company in Chennai, web developers company in Chennai"
 ---
 
-## All our website come with the following basic qualities,
+## All our website come with the following basic qualities
 
 1. With an SSL Certificate, (https secured connection).
 2. Mobile responsiveness, mobile-friendliness and a mobile-first approach.
