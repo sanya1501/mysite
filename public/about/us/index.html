@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head><meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=egde">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -28,23 +27,18 @@
 <link rel="icon" type="image/png" href="/images/favicon.png">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/css/bootstrap.min.css">
 <link rel="stylesheet" href="/style.css">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/all.min.css">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.css">
-<style>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.css"><style>
     .intro-header {
         background: radial-gradient(#000, #EDEDED);
         height: 70vh;
         position: relative;
     }
-
     .intro-header h1 {
         position: absolute;
         left: 50%;
         transform: translate(-50%, -50%);
         word-spacing: 0.8rem;
     }
-
     .intro-header h1::before {
         content: attr(data-text);
         position: absolute;
@@ -59,13 +53,13 @@
         color: transparent;
         opacity: .5;
     }
-
     @media(max-width: 768px) {
         .intro-header h1 {
             font-size: 2.5rem
         }
     }
-    #portfolio, #works{
+    #portfolio,
+    #works {
         padding-top: 8rem;
     }
 </style><style>
@@ -74,130 +68,85 @@
             align-items: center;
             display: flex;
         }
-
         .s2:nth-child(2) {
             height: 100%;
         }
-
         .s2:nth-child(2) .content-a {
             padding: 2rem;
         }
-
-        .s2:nth-child(2) .content-a::before {
-            position: absolute;
-            background-image: url(/images/cat-playing.png);
-            background-size: 100px 200px;
-            display: inline-block;
-            width: 100px;
-            height: 200px;
-            content: "";
-            left: 8rem;
-        }
-        @media(max-width:991px){
+        @media(max-width:991px) {
             .s2:nth-child(2) .content-a::before {
-            display: none;
+                display: none;
             }
         }
-
         .s2:nth-child(3) {
             background: #EBEBEB;
             position: relative;
-            
         }
-        .s2:nth-child(3) .content-a::after {
-            position: absolute;
-            background-image: url(/images/cat-vision-eyes-right.png);
-            background-size: 100px 60px;
-            display: block;
-            width: 100px;
-            height: 60px;
-            content: "";
-            right: 7rem;
-            bottom: 13rem;
-            
-        }
-        
-        
         .content-a {
             padding: 2rem 0;
             width: 80%;
             margin: 0 auto;
             box-shadow: 0 0.5em 2em rgba(0, 0, 0, 0.3);
         }
-
         .content-a p,
         .content-a h2,
         .content-a h3,
         .content-a li {
             text-align: center !important
         }
-
         .content-a li {
             line-height: 2rem;
         }
-
         .s2:nth-child(4) {
             background: #B8B8B8;
         }
-
         .s2:nth-child(5) {
             background: #999999;
             color: #fff !important;
         }
-
         .s2:nth-child(5) .content-a {
             padding: 1rem 0;
             align-items: center;
         }
-
         @media(max-width: 768px) {
             .intro-header h1 {
                 font-size: 2.5rem
             }
-
             .s2:nth-child(2) {
                 height: 120vh;
             }
-
             .s2:nth-child(3) {
                 height: 50vh;
             }
-
             .s2:nth-child(4) {
                 height: 100vh;
             }
-
             .s2:nth-child(5) {
                 height: 100vh;
             }
-
             .content-a {
                 width: 90%;
                 padding: 1rem !important;
             }
-
             .s2:nth-child(5) .content-a {
                 display: flex;
             }
-
             h3 {
                 font-size: 1.4rem;
             }
         }
-
         @media(max-width: 576px) {
             .s2:nth-child(5) .content-a {
                 display: inline;
                 margin: 1rem;
             }
-
             .s2:nth-child(5) .d-flex {
                 flex-direction: column;
             }
         }
     </style>
 </head>
-
 <body data-spy="scroll" data-target="navbar" data-offset="100">
     <section class="intro-header m-0 p-0 align-items-center d-flex justify-content-center">
         <h1 data-text="About TenSketch" class="m-0 p-0 position-absolute text-white text-center display-3">About
@@ -255,7 +204,7 @@ We provide holistic business solutions to various sectors of the business world.
             </div>
         </div>
     </section><style>
-  .dropdown-menu{
+  .dropdown-menu {
     background-color: #f8f9fa;
     border: none;
     border-radius: 0
@@ -280,13 +229,15 @@ We provide holistic business solutions to various sectors of the business world.
             Services
           </a>
           <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-            <a class="dropdown-item" href="https://www.tensketch.com/web-solutions/website-designing-and-development/">Website designing</a>
-            <a class="dropdown-item" href="https://www.tensketch.com/branding-services/branding-logo-graphics-designing/">Branding</a>
-            <a class="dropdown-item" href="https://www.tensketch.com/content-writing-services/and-proofreading/">Content writing</a>
+            <a class="dropdown-item" href="https://www.tensketch.com/web-solutions/website-designing-and-development/">Website
+              designing</a>
+            <a class="dropdown-item"
+              href="https://www.tensketch.com/branding-services/branding-logo-graphics-designing/">Branding</a>
+            <a class="dropdown-item" href="https://www.tensketch.com/content-writing-services/and-proofreading/">Content
+              writing</a>
             <a class="dropdown-item" href="https://www.tensketch.com/consulting/for-content-and-business/">Consulting</a>
           </div>
         </li>
-        
         <li class="nav-item">
           <a class="nav-link" href="#contact" aria-label="land (jump) to contact section">
             <i class="fa fa-phone" aria-hidden="true"></i>
@@ -295,8 +246,7 @@ We provide holistic business solutions to various sectors of the business world.
       </ul>
     </div>
   </div>
-</nav>
-<footer id="contact">
+</nav><footer id="contact">
     <div class="container d-flex h-100">
         <div class="row h-100 justify-content-center">
             <div class="col-lg-3 col-md-12">
@@ -309,7 +259,6 @@ We provide holistic business solutions to various sectors of the business world.
                         <a class="foot-link" href="https://www.tensketch.com/consulting/for-content-and-business/">Consulting</a>
                     </li>
                 </ul>
-
                 <h4 class="my-3">Portfolio</h4>
                 <ul class="list-unstyled mb-0">
                     <li class="mb-2">
@@ -326,9 +275,6 @@ We provide holistic business solutions to various sectors of the business world.
                             href="https://www.tensketch.com/content-writing-services/and-proofreading/#works">Content writing</a>
                     </li>
                 </ul>
-
-
-
             </div>
             <div class="col-lg-4 col-md-12">
                 
@@ -338,11 +284,11 @@ We provide holistic business solutions to various sectors of the business world.
                 <h3 class="my-3">Reach us</h3>
                 <ul class="list-unstyled mb-0">
                     <li class="mb-2">
-                        <i class="fa fa-mobile mr-2"></i>
+                        <img src="/images/smartphone.png" class="img-fluid icon filter" alt="Call TenSketch mobile">
                         <a href="tel:9840166419" title="call" aria-label="TenSketch mobile number">+91-9840166419</a>
                     </li>
                     <li class="mb-2">
-                        <i class="fa fa-envelope mr-2"></i>
+                        <img src="/images/mail.png" class="img-fluid icon filter" alt="email to TenSketch">
                         <a href="mailto:bala@tensketch.com" title="Click to send email" aria-label="TenSketch email id"
                             target="_top">bala@tensketch.com</a>
                     </li>
@@ -352,28 +298,31 @@ We provide holistic business solutions to various sectors of the business world.
                         <li>
                             <a href="https://wa.me/917010633516" target="_blank" rel="noopener"
                                 title="send a whatsapp message" aria-label="send whatsapp message">
-                                <img src="/images/whatsapp_logo-1.png" class="img-fluid wa lozad mb-1" alt="whatsapp_logo">
+                                <img src="/images/whatsapp.png" class="img-fluid lozad m-1" alt="send whatsapp enquiry">
                             </a>
                         </li>
                         <li>
                             <a href="https://www.facebook.com/tensketch285/" target="_blank" rel="noopener"
-                                aria-label="fb page of TenSketch"><i class="fab fa-facebook"></i></a>
+                                aria-label="fb page of TenSketch"><img src="/images/facebook.png"
+                                    class="img-fluid lozad m-1" alt="like us on facebook"></a>
                         </li>
                         <li>
                             <a href="https://www.linkedin.com/company/tensketch" target="_blank" rel="noopener"
-                                aria-label="linkedin page of TenSketch"><i class="fab fa-linkedin"></i></a>
+                                aria-label="linkedin page of TenSketch"><img src="/images/linkedin.png"
+                                    class="img-fluid lozad m-1" alt="follow us on linkedin"></a>
                         </li>
                         
                         <li class="mr-2">
                             <a href="https://www.youtube.com/channel/UCa3k-JV9xA6ncMGKaZCyU-Q?view_as=subscriber"
-                                target="_blank" rel="noopener" aria-label="fb page of TenSketch"><i
-                                    class="fab fa-youtube"></i></a>
+                                target="_blank" rel="noopener" aria-label="fb page of TenSketch"><img
+                                    src="/images/youtube.png" class="img-fluid lozad m-1"
+                                    alt="subscribe to our youtube channel"></a>
                         </li>
                         <li>
                             <a href="https://g.page/Website-designers-Chennai?share" target="_blank" rel="noopener"
                                 aria-label="google business page link of TenSketch"
-                                title="find location in google business page"><img src="/images/google_logo.png"
-                                    class="img-fluid goo lozad pb-1" alt="google_logo"></a>
+                                title="find location in google business page"><img src="/images/google.png"
+                                    class="img-fluid lozad m-1" alt="find us on Google my business"></a>
                         </li>
                     </ul>
                 </div>
@@ -423,9 +372,9 @@ We provide holistic business solutions to various sectors of the business world.
   
   $(window).scroll(function () {
     if ($(document).scrollTop() > 100) {
-      $('.navbar').addClass('affix animated fadeInDown');
+      $('.navbar').addClass('affix');
     } else {
-      $('.navbar').removeClass('affix animated fadeInDown');
+      $('.navbar').removeClass('affix');
     }
   });
 </script>
@@ -491,5 +440,4 @@ We provide holistic business solutions to various sectors of the business world.
     $('#title').text($('#link').attr('title'));
   });
 </script></body>
-
 </html>

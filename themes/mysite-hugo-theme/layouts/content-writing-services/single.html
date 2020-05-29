@@ -81,18 +81,16 @@
     <section id="works">
         <div class="container">
             <h1 class="text-center mb-5">Content writing portfolio</h1>
-            
-                <div class="masonry">
-                    {{range $index, $val := .Site.Taxonomies.tags.content}}
-                    <div class="masonry-item">
-                        <div class="masonry-content">
-                            <a href="{{.Description}}" target="_blank" rel="noopener" aria-label="{{.Name}}">
-                                <img class="img-fluid" src="{{.Page.Params.Image}}" alt="{{.Title}}">
-                            </a>
-                        </div>
+            <div class="masonry">
+                {{range $index, $val := .Site.Taxonomies.tags.content}}
+                <div class="masonry-item">
+                    <div class="masonry-content">
+                        <a href="{{.Description}}" target="_blank" rel="noopener" aria-label="{{.Name}}">
+                            <img class="img-fluid" src="{{.Page.Params.Image}}" alt="{{.Title}}">
+                        </a>
                     </div>
-                    {{end}}
-                
+                </div>
+                {{end}}
                 <!-- <div class="row mb-2">
                     {{range $index, $val := .Site.Taxonomies.tags.content}}
                     <div class="col-lg-3 col-md-4 col-4 p-2 mb-2">

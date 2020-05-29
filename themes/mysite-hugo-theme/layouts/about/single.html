@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     {{- partial "head.html" . -}}
     {{- partial "css-s.html" . -}}
@@ -10,130 +9,85 @@
             align-items: center;
             display: flex;
         }
-
         .s2:nth-child(2) {
             height: 100%;
         }
-
         .s2:nth-child(2) .content-a {
             padding: 2rem;
         }
-
-        .s2:nth-child(2) .content-a::before {
-            position: absolute;
-            background-image: url(/images/cat-playing.png);
-            background-size: 100px 200px;
-            display: inline-block;
-            width: 100px;
-            height: 200px;
-            content: "";
-            left: 8rem;
-        }
-        @media(max-width:991px){
+        @media(max-width:991px) {
             .s2:nth-child(2) .content-a::before {
-            display: none;
+                display: none;
             }
         }
-
         .s2:nth-child(3) {
             background: #EBEBEB;
             position: relative;
-            
         }
-        .s2:nth-child(3) .content-a::after {
-            position: absolute;
-            background-image: url(/images/cat-vision-eyes-right.png);
-            background-size: 100px 60px;
-            display: block;
-            width: 100px;
-            height: 60px;
-            content: "";
-            right: 7rem;
-            bottom: 13rem;
-            
-        }
-        
-        
         .content-a {
             padding: 2rem 0;
             width: 80%;
             margin: 0 auto;
             box-shadow: 0 0.5em 2em rgba(0, 0, 0, 0.3);
         }
-
         .content-a p,
         .content-a h2,
         .content-a h3,
         .content-a li {
             text-align: center !important
         }
-
         .content-a li {
             line-height: 2rem;
         }
-
         .s2:nth-child(4) {
             background: #B8B8B8;
         }
-
         .s2:nth-child(5) {
             background: #999999;
             color: #fff !important;
         }
-
         .s2:nth-child(5) .content-a {
             padding: 1rem 0;
             align-items: center;
         }
-
         @media(max-width: 768px) {
             .intro-header h1 {
                 font-size: 2.5rem
             }
-
             .s2:nth-child(2) {
                 height: 120vh;
             }
-
             .s2:nth-child(3) {
                 height: 50vh;
             }
-
             .s2:nth-child(4) {
                 height: 100vh;
             }
-
             .s2:nth-child(5) {
                 height: 100vh;
             }
-
             .content-a {
                 width: 90%;
                 padding: 1rem !important;
             }
-
             .s2:nth-child(5) .content-a {
                 display: flex;
             }
-
             h3 {
                 font-size: 1.4rem;
             }
         }
-
         @media(max-width: 576px) {
             .s2:nth-child(5) .content-a {
                 display: inline;
                 margin: 1rem;
             }
-
             .s2:nth-child(5) .d-flex {
                 flex-direction: column;
             }
         }
     </style>
 </head>
-
 <body data-spy="scroll" data-target="navbar" data-offset="100">
     <section class="intro-header m-0 p-0 align-items-center d-flex justify-content-center">
         <h1 data-text="About TenSketch" class="m-0 p-0 position-absolute text-white text-center display-3">About
@@ -193,5 +147,4 @@
     {{- partial "footer.html" . -}}
     {{- partial "scripts.html" . -}}
 </body>
-
 </html>

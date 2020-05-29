@@ -1,20 +1,16 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     {{- partial "head.html" . -}}
     {{- partial "css-s.html" . -}}
     <style>
         .s2 {
             height: 100vh;
-
         }
-
         .s2:nth-child(0) {
             background: #EBEBEB;
             height: 100%;
         }
-
         .content-a {
             padding: 2rem 1rem;
             width: 80%;
@@ -24,40 +20,31 @@
             box-shadow: 0 5px 10px rgba(154, 160, 185, .05), 0 15px 40px rgba(166, 173, 201, .2);
             transition: box-shadow .2s ease;
         }
-
         .content-a h2,
         .content-a p {
             text-align: center;
         }
-
-        .content-a ol{
+        .content-a ol {
             list-style: none;
         }
-
         .content-a li {
             line-height: 2rem;
             text-align: center;
         }
-
         @media(max-width: 768px) {
             .s2:nth-child(2) {
                 height: 120vh;
             }
-
             .content-a {
                 width: 90%;
                 padding: 1rem !important;
             }
-
             h3 {
                 font-size: 1.4rem;
             }
-
-          
         }
     </style>
 </head>
-
 <body data-spy="scroll" data-target="navbar" data-offset="100">
     <section class="intro-header m-0 p-0 align-items-center d-flex justify-content-center">
         <h1 data-text="Web Solutions" class="m-0 p-0 position-absolute text-white text-center display-3">Web Solutions
@@ -84,7 +71,6 @@
                 </div>
                 {{end}}
             </div>
-
         </div>
     </section>
     <section id="pricing">
@@ -189,10 +175,8 @@
             </div>
         </div>
     </section>
-    
     {{- partial "header-s.html" . -}}
     {{- partial "footer.html" . -}}
     {{- partial "scripts.html" . -}}
 </body>
-
 </html>

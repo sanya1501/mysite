@@ -3,11 +3,12 @@
     <div class="container h-100">
         <div class="row align-items-center h-100">
             <div class="col-md-8 mx-auto">
-                <img src="images/logo.png" class="animated fadeInUp slow" alt="TenSketch logo">
+                <img id="intro" src="images/logo.png" class="img-fluid position-relative" alt="TenSketch logo">
             </div>
             <div class="col-md-8 mx-auto">
                 <a href="#services" aria-label="land (jump) to services section">
-                    <i class="fas fa-chevron-down animated fadeInDown delay-2s fa-3x"></i>
+                    <img src="/images/down-arrow.png" class="img-fluid icon-a position-relative"
+                        alt="go to services section">
                 </a>
             </div>
         </div>
@@ -42,7 +43,8 @@
             <div class="col-md-6 web">
                 <h2>sketches websites</h2>
                 <img data-src="images/website-256.png" class="img-fluid lozad" alt="">
-                <a href="{{.Site.BaseURL}}web-solutions/website-designing-and-development/"><button type="button" class="btn btn-primary btn-lg">Read
+                <a href="{{.Site.BaseURL}}web-solutions/website-designing-and-development/"><button type="button"
+                        class="btn btn-primary btn-lg">Read
                         more</button></a>
             </div>
         </div>
@@ -50,7 +52,8 @@
             <div class="col-md-6 web">
                 <h2>brands your organization</h2>
                 <img data-src="images/branding-256.png" class="img-fluid lozad" alt="">
-                <a href="{{.Site.BaseURL}}branding-services/branding-logo-graphics-designing/"><button type="button" class="btn btn-primary btn-lg">Read
+                <a href="{{.Site.BaseURL}}branding-services/branding-logo-graphics-designing/"><button type="button"
+                        class="btn btn-primary btn-lg">Read
                         more</button></a>
             </div>
             <div class="col-md-6 img-bg">
@@ -64,7 +67,8 @@
             <div class="col-md-6 web">
                 <h2>writes content</h2>
                 <img data-src="images/content-256.png" class="img-fluid lozad" alt="">
-                <a href="{{.Site.BaseURL}}content-writing-services/and-proofreading/"><button type="button" class="btn btn-primary btn-lg">Read
+                <a href="{{.Site.BaseURL}}content-writing-services/and-proofreading/"><button type="button"
+                        class="btn btn-primary btn-lg">Read
                         more</button></a>
             </div>
         </div>
@@ -343,7 +347,8 @@
             <img data-src="images/goals-1.jpg" class="img-fluid lozad active" alt="goal oriented approach">
             <img data-src="images/devops.png" class="img-fluid lozad" alt="devops">
             <img data-src="images/original-design.jpg" class="img-fluid lozad" alt="original-design">
-            <img data-src="images/high-performance-websites.jpg" class="img-fluid lozad" alt="high-performance-websites">
+            <img data-src="images/high-performance-websites.jpg" class="img-fluid lozad"
+                alt="high-performance-websites">
         </div>
     </div>
     <div class="icons d-flex justify-content-between align-items-center">
@@ -351,10 +356,10 @@
         </ul>
         <ul class="controls d-flex position-relative list-unstyled">
             <li>
-                <i class="fas fa-chevron-left fa-2x" onclick="prevSlide();prevSlideText();"></i>
+                <img src="/images/back.png" class="img-fluid" alt="" onclick="prevSlide();prevSlideText();">
             </li>
             <li>
-                <i class="fas fa-chevron-right fa-2x" onclick="nextSlide();nextSlideText();"></i>
+                <img src="/images/next.png" class="img-fluid" alt="" onclick="nextSlide();nextSlideText();">
             </li>
         </ul>
     </div>

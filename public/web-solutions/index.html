@@ -27,20 +27,18 @@
 <link rel="icon" type="image/png" href="/images/favicon.png">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/css/bootstrap.min.css">
 <link rel="stylesheet" href="/style.css">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/all.min.css">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.css">
-</head>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.css"></head>
 <body data-spy="scroll" data-target="navbar" data-offset="100">
 <section class="intro">
     <div class="container h-100">
         <div class="row align-items-center h-100">
             <div class="col-md-8 mx-auto">
-                <img src="images/logo.png" class="animated fadeInUp slow" alt="TenSketch logo">
+                <img id="intro" src="images/logo.png" class="img-fluid position-relative" alt="TenSketch logo">
             </div>
             <div class="col-md-8 mx-auto">
                 <a href="#services" aria-label="land (jump) to services section">
-                    <i class="fas fa-chevron-down animated fadeInDown delay-2s fa-3x"></i>
+                    <img src="/images/down-arrow.png" class="img-fluid icon-a position-relative"
+                        alt="go to services section">
                 </a>
             </div>
         </div>
@@ -73,7 +71,8 @@
             <div class="col-md-6 web">
                 <h2>sketches websites</h2>
                 <img data-src="images/website-256.png" class="img-fluid lozad" alt="">
-                <a href="https://www.tensketch.com/web-solutions/website-designing-and-development/"><button type="button" class="btn btn-primary btn-lg">Read
+                <a href="https://www.tensketch.com/web-solutions/website-designing-and-development/"><button type="button"
+                        class="btn btn-primary btn-lg">Read
                         more</button></a>
             </div>
         </div>
@@ -81,7 +80,8 @@
             <div class="col-md-6 web">
                 <h2>brands your organization</h2>
                 <img data-src="images/branding-256.png" class="img-fluid lozad" alt="">
-                <a href="https://www.tensketch.com/branding-services/branding-logo-graphics-designing/"><button type="button" class="btn btn-primary btn-lg">Read
+                <a href="https://www.tensketch.com/branding-services/branding-logo-graphics-designing/"><button type="button"
+                        class="btn btn-primary btn-lg">Read
                         more</button></a>
             </div>
             <div class="col-md-6 img-bg">
@@ -95,7 +95,8 @@
             <div class="col-md-6 web">
                 <h2>writes content</h2>
                 <img data-src="images/content-256.png" class="img-fluid lozad" alt="">
-                <a href="https://www.tensketch.com/content-writing-services/and-proofreading/"><button type="button" class="btn btn-primary btn-lg">Read
+                <a href="https://www.tensketch.com/content-writing-services/and-proofreading/"><button type="button"
+                        class="btn btn-primary btn-lg">Read
                         more</button></a>
             </div>
         </div>
@@ -130,7 +131,8 @@
             <img data-src="images/goals-1.jpg" class="img-fluid lozad active" alt="goal oriented approach">
             <img data-src="images/devops.png" class="img-fluid lozad" alt="devops">
             <img data-src="images/original-design.jpg" class="img-fluid lozad" alt="original-design">
-            <img data-src="images/high-performance-websites.jpg" class="img-fluid lozad" alt="high-performance-websites">
+            <img data-src="images/high-performance-websites.jpg" class="img-fluid lozad"
+                alt="high-performance-websites">
         </div>
     </div>
     <div class="icons d-flex justify-content-between align-items-center">
@@ -138,10 +140,10 @@
         </ul>
         <ul class="controls d-flex position-relative list-unstyled">
             <li>
-                <i class="fas fa-chevron-left fa-2x" onclick="prevSlide();prevSlideText();"></i>
+                <img src="/images/back.png" class="img-fluid" alt="" onclick="prevSlide();prevSlideText();">
             </li>
             <li>
-                <i class="fas fa-chevron-right fa-2x" onclick="nextSlide();nextSlideText();"></i>
+                <img src="/images/next.png" class="img-fluid" alt="" onclick="nextSlide();nextSlideText();">
             </li>
         </ul>
     </div>
@@ -323,11 +325,9 @@
         <li class="nav-item">
           <a class="nav-link" href="#services" aria-label="land (jump) to services section">Services</a>
         </li>
-        
-        
         <li class="nav-item">
           <a class="nav-link" href="#contact" aria-label="land (jump) to contact section">
-            <i class="fa fa-phone" aria-hidden="true"></i>
+            <img src="/images/phone.png" class="img-fluid icon" alt="call TenSketch">
           </a>
         </li>
       </ul>
@@ -346,7 +346,6 @@
                         <a class="foot-link" href="https://www.tensketch.com/consulting/for-content-and-business/">Consulting</a>
                     </li>
                 </ul>
-
                 <h4 class="my-3">Portfolio</h4>
                 <ul class="list-unstyled mb-0">
                     <li class="mb-2">
@@ -363,9 +362,6 @@
                             href="https://www.tensketch.com/content-writing-services/and-proofreading/#works">Content writing</a>
                     </li>
                 </ul>
-
-
-
             </div>
             <div class="col-lg-4 col-md-12">
                 
@@ -375,11 +371,11 @@
                 <h3 class="my-3">Reach us</h3>
                 <ul class="list-unstyled mb-0">
                     <li class="mb-2">
-                        <i class="fa fa-mobile mr-2"></i>
+                        <img src="/images/smartphone.png" class="img-fluid icon filter" alt="Call TenSketch mobile">
                         <a href="tel:9840166419" title="call" aria-label="TenSketch mobile number">+91-9840166419</a>
                     </li>
                     <li class="mb-2">
-                        <i class="fa fa-envelope mr-2"></i>
+                        <img src="/images/mail.png" class="img-fluid icon filter" alt="email to TenSketch">
                         <a href="mailto:bala@tensketch.com" title="Click to send email" aria-label="TenSketch email id"
                             target="_top">bala@tensketch.com</a>
                     </li>
@@ -389,28 +385,31 @@
                         <li>
                             <a href="https://wa.me/917010633516" target="_blank" rel="noopener"
                                 title="send a whatsapp message" aria-label="send whatsapp message">
-                                <img src="/images/whatsapp_logo-1.png" class="img-fluid wa lozad mb-1" alt="whatsapp_logo">
+                                <img src="/images/whatsapp.png" class="img-fluid lozad m-1" alt="send whatsapp enquiry">
                             </a>
                         </li>
                         <li>
                             <a href="https://www.facebook.com/tensketch285/" target="_blank" rel="noopener"
-                                aria-label="fb page of TenSketch"><i class="fab fa-facebook"></i></a>
+                                aria-label="fb page of TenSketch"><img src="/images/facebook.png"
+                                    class="img-fluid lozad m-1" alt="like us on facebook"></a>
                         </li>
                         <li>
                             <a href="https://www.linkedin.com/company/tensketch" target="_blank" rel="noopener"
-                                aria-label="linkedin page of TenSketch"><i class="fab fa-linkedin"></i></a>
+                                aria-label="linkedin page of TenSketch"><img src="/images/linkedin.png"
+                                    class="img-fluid lozad m-1" alt="follow us on linkedin"></a>
                         </li>
                         
                         <li class="mr-2">
                             <a href="https://www.youtube.com/channel/UCa3k-JV9xA6ncMGKaZCyU-Q?view_as=subscriber"
-                                target="_blank" rel="noopener" aria-label="fb page of TenSketch"><i
-                                    class="fab fa-youtube"></i></a>
+                                target="_blank" rel="noopener" aria-label="fb page of TenSketch"><img
+                                    src="/images/youtube.png" class="img-fluid lozad m-1"
+                                    alt="subscribe to our youtube channel"></a>
                         </li>
                         <li>
                             <a href="https://g.page/Website-designers-Chennai?share" target="_blank" rel="noopener"
                                 aria-label="google business page link of TenSketch"
-                                title="find location in google business page"><img src="/images/google_logo.png"
-                                    class="img-fluid goo lozad pb-1" alt="google_logo"></a>
+                                title="find location in google business page"><img src="/images/google.png"
+                                    class="img-fluid lozad m-1" alt="find us on Google my business"></a>
                         </li>
                     </ul>
                 </div>
@@ -460,9 +459,9 @@
   
   $(window).scroll(function () {
     if ($(document).scrollTop() > 100) {
-      $('.navbar').addClass('affix animated fadeInDown');
+      $('.navbar').addClass('affix');
     } else {
-      $('.navbar').removeClass('affix animated fadeInDown');
+      $('.navbar').removeClass('affix');
     }
   });
 </script>

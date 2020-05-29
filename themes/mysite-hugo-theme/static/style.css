@@ -6,13 +6,12 @@
   font-weight: normal;
   font-style: normal;
 }
-html{
+html {
   scroll-behavior: smooth;
-  
 }
-html, body {
+html,
+body {
   overflow-x: hidden;
-  
   -webkit-font-smoothing: antialiased;
   margin: 0;
   padding: 0;
@@ -35,7 +34,6 @@ li {
   line-height: 1.6rem;
   /* font-family: Georgia, 'Times New Roman', Times, serif; */
 }
-
 a:hover {
   text-decoration: none;
 }
@@ -46,28 +44,40 @@ a:hover {
   height: 100vh;
   padding: 12rem 0rem;
 }
-
-.intro a .fas {
-  color: #000;
-  transition: padding 0.5s;
-  transition-timing-function: ease;
-}
-.intro a .fas:hover {
-  padding: 1rem 0rem;
-}
-.intro h1 {
-  font-size: 5rem;
-}
-.intro li {
-  font-size: 1.5rem;
-}
-.intro img {
+#intro {
   height: 300px;
+  animation: logo;
+  animation-duration: 3s;
+  animation-fill-mode: forwards;
 }
-.intro i {
-  margin-left: 10rem;
+@keyframes logo {
+  0% {
+    bottom: -100vh;
+  }
+  100% {
+    bottom: 0;
+  }
 }
 
+.icon-a {
+  height: 40px;
+  margin-left: 10rem;
+  animation: fadeInDown;
+  animation-duration: 1s;
+  animation-delay: 2s;
+  animation-fill-mode: both;
+}
+@keyframes fadeInDown {
+  0% {
+    opacity: 0;
+    top: -120px;
+    display: none;
+  }
+  100% {
+    opacity: 1;
+    top: 0;
+  }
+}
 .navbar-light .navbar-nav .nav-link {
   color: #000;
   font-size: 1.2rem;
@@ -78,34 +88,39 @@ a:hover {
 .navbar-brand img {
   height: 70px;
 }
-
-.nav-pills .nav-link{
+.nav-pills .nav-link {
   color: #000;
-
 }
 .nav-pills .nav-link.active,
 .nav-pills .show > .nav-link {
   background-color: #000;
 }
-
+.icon {
+  height: 20px;
+  margin-bottom: 8px;
+}
 .affix {
   top: 0;
   width: 100%;
   z-index: 9999 !important;
   position: fixed;
+  animation: fadeInDown;
+  animation-duration: 1s;
+  animation-fill-mode: both;
 }
-
-.img-bg {
-  background: #000;
-}
-.img-bg img {
-  filter: invert(1);
+@keyframes fadeInDown {
+  0% {
+    opacity: 0;
+    top: -120px;
+  }
+  100% {
+    top: 0;
+  }
 }
 
 #about {
   height: 100vh;
 }
-
 #services {
   background: #fff;
   padding-top: 12rem;
@@ -113,22 +128,28 @@ a:hover {
 #services .col-md-6 {
   padding: 6rem 0rem;
 }
-
-#services .web img {
+.img-bg {
+  background: #000;
+}
+.img-bg img {
+  filter: invert(1);
+}
+.web img {
   display: none;
 }
 #services a {
   color: #fff;
   text-decoration: none;
 }
-
+.btn{
+  border-radius: 5px!important;
+}
 #portfolio img {
   object-fit: cover;
 }
 #portfolio .img-fluid:hover {
   box-shadow: 0 0.5rem 1rem 0 rgba(23, 23, 23, 0.5);
 }
-
 /* masonry */
 .masonry {
   columns: 3;
@@ -182,14 +203,12 @@ a:hover {
   background: #212121;
   color: #fff;
 }
-
 @media (max-width: 400px) {
   .btn.filter {
     padding-left: 1.1rem;
     padding-right: 1.1rem;
   }
 }
-
 .price-table {
   overflow: hidden;
   margin: 20px;
@@ -219,7 +238,6 @@ a:hover {
   border-left: 15px solid #000;
   border-right: 15px solid #000;
 }
-
 .why {
   margin-top: 8rem;
   padding: 0 100px;
@@ -287,7 +305,6 @@ a:hover {
 .controls li:hover {
   opacity: 0.5;
 }
-
 @media (max-width: 1024px) {
   .why {
     padding: 20px 30px;
@@ -296,11 +313,9 @@ a:hover {
     margin-right: 3rem;
   }
 }
-
 .approach {
   background-color: #fff;
 }
-
 .grid {
   position: relative;
   display: grid;
@@ -385,21 +400,17 @@ a:hover {
 .show > .btn-primary.dropdown-toggle:focus {
   box-shadow: 0 0 0 0.1rem #fff;
 }
-
 #clients,
 #contact,
 #pricing {
   padding-top: 8rem;
 }
-
 .slick-slide {
   margin: 0px 20px;
 }
-
 .slick-slide img {
   width: 100%;
 }
-
 .slick-slider {
   position: relative;
   display: block;
@@ -414,7 +425,6 @@ a:hover {
   touch-action: pan-y;
   -webkit-tap-highlight-color: transparent;
 }
-
 .slick-list {
   position: relative;
   display: block;
@@ -429,7 +439,6 @@ a:hover {
   cursor: pointer;
   cursor: hand;
 }
-
 .slick-slider .slick-track,
 .slick-slider .slick-list {
   -webkit-transform: translate3d(0, 0, 0);
@@ -438,7 +447,6 @@ a:hover {
   -o-transform: translate3d(0, 0, 0);
   transform: translate3d(0, 0, 0);
 }
-
 .slick-track {
   position: relative;
   top: 0;
@@ -456,7 +464,6 @@ a:hover {
 .slick-loading .slick-track {
   visibility: hidden;
 }
-
 .slick-slide {
   display: none;
   float: left;
@@ -489,30 +496,29 @@ a:hover {
 .slick-arrow.slick-hidden {
   display: none;
 }
-
-#contact{
+#contact {
   background-color: #5f5f5f;
   color: #fff;
 }
-#contact a{
-
-  color: rgb(126, 220, 248)
+#contact a {
+  color: rgb(126, 220, 248);
 }
-#contact a:hover{
-
-  color: #fff
+#contact a:hover {
+  color: #fff;
 }
-del{
+.filter {
+  filter: invert(1);
+}
+del {
   cursor: pointer;
 }
 .social ul li {
   margin-right: 1rem;
 }
-
-.wa{
+.wa {
   height: 20px;
 }
-.goo{
+.goo {
   height: 28px;
 }
 .bottom-footer {
@@ -523,7 +529,6 @@ del{
 .bottom-footer a {
   color: #fff;
 }
-
 #back2Top {
   width: 40px;
   line-height: 40px;
@@ -545,12 +550,10 @@ del{
   font-size: 30px;
   text-decoration: none;
 }
-
 #back2Top:hover {
   background-color: #000;
   color: #fff;
 }
-
 /* media queries */
 @media (max-width: 991px) {
   .navbar-collapse {
@@ -564,7 +567,6 @@ del{
     max-width: 50% !important;
   }
 }
-
 @media (max-width: 768px) {
   .why {
     height: 50vh;
@@ -579,7 +581,6 @@ del{
     bottom: 12rem;
   }
 }
-
 @media (max-width: 576px) {
   p {
     font-size: 1rem;
@@ -593,20 +594,20 @@ del{
   #services .col-md-6 {
     padding: 3rem 0rem !important;
   }
-  .intro img {
+  #intro {
     height: 200px;
     margin-left: 6rem;
   }
-  .intro i {
+  .icon-a {
     margin-left: 13rem;
   }
   .img-bg {
     display: none;
   }
-  #about .col-md-8{
+  #about .col-md-8 {
     padding: 0 30px;
   }
-  #services .web img {
+  .web img {
     display: initial !important;
     filter: invert(1);
     max-width: 20%;
@@ -632,12 +633,10 @@ del{
     bottom: 8rem;
     margin-bottom: 3rem;
   }
-
   .content2 {
     flex-direction: column-reverse;
     padding-top: 0;
   }
-
   .content2 .bannerText {
     margin-right: 0rem;
     margin-top: 3rem;
@@ -658,7 +657,6 @@ del{
     justify-content: center;
   }
 }
-
 @media (max-width: 425px) {
   .content2 .bannerText {
     margin-top: 0rem;
@@ -667,27 +665,24 @@ del{
     height: 250px;
   }
 }
-
 @media (max-width: 320px) {
-  .intro img {
+  #intro {
     height: 170px;
   }
 }
-
 @media only screen and (device-width: 375px) and (device-height: 812px) and (-webkit-device-pixel-ratio: 3) {
-  .intro img {
+  #intro {
     height: 160px;
     margin-left: 10rem;
     margin-top: 3rem;
   }
-  .intro i {
+  .icon-a {
     margin-left: 15rem;
     margin-bottom: 10rem !important;
   }
   .why {
     min-height: 70vh;
   }
-
   .content2 .bannerImg {
     height: 300px;
   }
