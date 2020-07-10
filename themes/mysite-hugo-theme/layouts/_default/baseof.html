@@ -1,9 +1,34 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     {{- partial "head.html" . -}}
 </head>
+
 <body data-spy="scroll" data-target="navbar" data-offset="100">
+    <!-- fb sdk -->
+
+    <script>
+        window.fbAsyncInit = function () {
+            FB.init({
+                appId: '3463805060315621',
+                cookie: true,
+                xfbml: true,
+                version: 'v7.0'
+            });
+
+            FB.AppEvents.logPageView();
+
+        };
+
+        (function (d, s, id) {
+            var js, fjs = d.getElementsByTagName(s)[0];
+            if (d.getElementById(id)) { return; }
+            js = d.createElement(s); js.id = id;
+            js.src = "https://connect.facebook.net/en_US/sdk.js";
+            fjs.parentNode.insertBefore(js, fjs);
+        }(document, 'script', 'facebook-jssdk'));
+    </script>
     {{- block "intro" . }}{{- end }}
     {{- block "about" . }}{{- end }}
     {{- block "services" . }}{{- end }}
@@ -14,4 +39,5 @@
     {{- partial "footer.html" . -}}
     {{- partial "scripts.html" . -}}
 </body>
+
 </html>

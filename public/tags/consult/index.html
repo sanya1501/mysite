@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head><meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=egde">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -28,7 +29,31 @@
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/css/bootstrap.min.css">
 <link rel="stylesheet" href="/style.css">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.css"></head>
+
 <body data-spy="scroll" data-target="navbar" data-offset="100">
+    
+
+    <script>
+        window.fbAsyncInit = function () {
+            FB.init({
+                appId: '3463805060315621',
+                cookie: true,
+                xfbml: true,
+                version: 'v7.0'
+            });
+
+            FB.AppEvents.logPageView();
+
+        };
+
+        (function (d, s, id) {
+            var js, fjs = d.getElementsByTagName(s)[0];
+            if (d.getElementById(id)) { return; }
+            js = d.createElement(s); js.id = id;
+            js.src = "https://connect.facebook.net/en_US/sdk.js";
+            fjs.parentNode.insertBefore(js, fjs);
+        }(document, 'script', 'facebook-jssdk'));
+    </script>
 <section class="intro">
     <div class="container h-100">
         <div class="row align-items-center h-100">
@@ -389,6 +414,11 @@
                             </a>
                         </li>
                         <li>
+                            <a href="https://website-designing-chennai-tensketch.blogspot.com/" target="_blank"
+                                rel="noopener" aria-label="blog page of TenSketch"><img src="/images/blogger-icon.png"
+                                    class="img-fluid lozad m-1" alt="subscribe to our blog"></a>
+                        </li>
+                        <li>
                             <a href="https://www.facebook.com/tensketch285/" target="_blank" rel="noopener"
                                 aria-label="fb page of TenSketch"><img src="/images/facebook.png"
                                     class="img-fluid lozad m-1" alt="like us on facebook"></a>
@@ -412,6 +442,9 @@
                                     class="img-fluid lozad m-1" alt="find us on Google my business"></a>
                         </li>
                     </ul>
+                    <div class="fb-messengermessageus" messenger_app_id="3463805060315621" page_id="1636090596425364"
+                        color="white>" size="standard">
+                    </div>
                 </div>
             </div>
             <div class="col-lg-5 col-md-12 mb-5">
@@ -527,4 +560,5 @@
     $('#title').text($('#link').attr('title'));
   });
 </script></body>
+
 </html>
