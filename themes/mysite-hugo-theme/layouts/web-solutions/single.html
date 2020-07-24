@@ -26,6 +26,7 @@
         }
         .content-a ol {
             list-style: none;
+            padding-inline-start: 0px!important;
         }
         .content-a li {
             line-height: 2rem;
@@ -64,7 +65,7 @@
             <h1 class="text-center mb-5">Websites portfolio</h1>
             <div class="row">
                 {{range $index, $val := .Site.Taxonomies.tags.websites}}
-                <div class="col-lg-4 col-md-4 col-4 my-3">
+                <div class="col-lg-4 col-md-4 col-6 my-3">
                     <a href="{{.Description}}" target="_blank" rel="noopener" aria-label="{{.Name}}">
                         <img src="{{.Page.Params.image}}" class="img-fluid p-2" alt="{{.Name}}">
                     </a>
@@ -73,7 +74,7 @@
             </div>
         </div>
     </section>
-    <section id="pricing">
+    <section id="pricing" class="my-5">
         <div class="container">
             <h2 class="text-center mb-5">Pricing</h2>
             <!-- Content here -->
@@ -87,7 +88,7 @@
                         <div class="price-content position-relative mt-2">
                             <ul class="list-unstyled">
                                 <li>Static website</li>
-                                <li>one page</li>
+                                <li>one landing page</li>
                                 <li>Domain name*</li>
                                 <li>1 form</li>
                                 <li>Content proofreading</li>
@@ -111,7 +112,8 @@
                         <div class="price-content position-relative mt-2">
                             <ul class="list-unstyled">
                                 <li>Static website</li>
-                                <li>upto 3 pages</li>
+                                <li>upto 2 different page designs</li>
+                                <li>Upto 3 page duplications</li>
                                 <li>Domain name*</li>
                                 <li>2 forms</li>
                                 <li>Content proofreading</li>
@@ -134,8 +136,9 @@
                         </div>
                         <div class="price-content position-relative mt-2">
                             <ul class="list-unstyled">
-                                <li>Dynamic website</li>
-                                <li>upto 5 pages</li>
+                                <li>Static website</li>
+                                <li>upto 4 different page designs</li>
+                                <li>Upto 5 page duplications</li>
                                 <li>Domain name*</li>
                                 <li>2 forms</li>
                                 <li>Content writing</li>
@@ -153,12 +156,12 @@
                     <div class="price-table">
                         <div class="price-head">
                             <h4>Special</h4>
-                            <h2>₹21,990</h2>
+                            <h2>₹29,990</h2>
                         </div>
                         <div class="price-content position-relative mt-2">
                             <ul class="list-unstyled">
-                                <li>Dynamic website</li>
-                                <li>upto 7 pages</li>
+                                <li>Dynamic & E-Commerce websites</li>
+                                <li>upto 10 pages</li>
                                 <li>Domain name*</li>
                                 <li>no. of forms as per needs</li>
                                 <li>Content writing</li>

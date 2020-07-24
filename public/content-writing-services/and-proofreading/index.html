@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head><meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=egde">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -72,28 +73,34 @@
             box-shadow: 0 5px 10px rgba(154, 160, 185, .05), 0 15px 40px rgba(166, 173, 201, .2);
             transition: box-shadow .2s ease;
         }
+
         .content-a h2,
         .content-a p,
         .content-a li {
             text-align: center;
         }
+
         .content-a ol {
             list-style: none;
             padding: 0;
         }
+
         .services h1 {
             text-align: center;
             margin-bottom: 3rem;
         }
+
         .services img {
             height: auto;
             max-width: 100%;
         }
+
         .grid-s {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
             grid-gap: 1em;
         }
+
         .grid-s h3 {
             text-align: center;
             align-items: center;
@@ -105,14 +112,33 @@
             box-shadow: 0 5px 10px rgba(154, 160, 185, .05), 0 15px 40px rgba(166, 173, 201, .2);
             transition: box-shadow .2s ease;
         }
+        .grid-s ol li {
+                list-style: none;
+        }
         @media(max-width: 768px) {
             .content-a {
                 width: 90%;
                 padding: 1rem !important;
             }
         }
+
+        @media(max-width: 576px) {
+            .grid-s h3 {
+
+                margin: 0 1.3rem;
+            }
+            .grid-s ol{
+                padding-inline-start: 0;
+            }
+            .grid-s ol li {
+                
+                text-align: center;
+                
+            }
+        }
     </style>
 </head>
+
 <body data-spy="scroll" data-target="navbar" data-offset="100">
     <section class="intro-header m-0 p-0 align-items-center d-flex justify-content-center">
         <h1 data-text="Content Writing" class="m-0 p-0 position-absolute text-white text-center display-3">Content
@@ -412,9 +438,7 @@
                                     class="img-fluid lozad m-1" alt="find us on Google my business"></a>
                         </li>
                     </ul>
-                    <div class="fb-messengermessageus" messenger_app_id="3463805060315621" page_id="1636090596425364"
-                        color="white>" size="standard">
-                    </div>
+                    
                 </div>
             </div>
             <div class="col-lg-5 col-md-12 mb-5">
@@ -530,4 +554,5 @@
     $('#title').text($('#link').attr('title'));
   });
 </script></body>
+
 </html>

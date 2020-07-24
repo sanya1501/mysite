@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     {{- partial "head.html" . -}}
     {{- partial "css-s.html" . -}}
@@ -13,28 +14,34 @@
             box-shadow: 0 5px 10px rgba(154, 160, 185, .05), 0 15px 40px rgba(166, 173, 201, .2);
             transition: box-shadow .2s ease;
         }
+
         .content-a h2,
         .content-a p,
         .content-a li {
             text-align: center;
         }
+
         .content-a ol {
             list-style: none;
             padding: 0;
         }
+
         .services h1 {
             text-align: center;
             margin-bottom: 3rem;
         }
+
         .services img {
             height: auto;
             max-width: 100%;
         }
+
         .grid-s {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
             grid-gap: 1em;
         }
+
         .grid-s h3 {
             text-align: center;
             align-items: center;
@@ -46,14 +53,33 @@
             box-shadow: 0 5px 10px rgba(154, 160, 185, .05), 0 15px 40px rgba(166, 173, 201, .2);
             transition: box-shadow .2s ease;
         }
+        .grid-s ol li {
+                list-style: none;
+        }
         @media(max-width: 768px) {
             .content-a {
                 width: 90%;
                 padding: 1rem !important;
             }
         }
+
+        @media(max-width: 576px) {
+            .grid-s h3 {
+
+                margin: 0 1.3rem;
+            }
+            .grid-s ol{
+                padding-inline-start: 0;
+            }
+            .grid-s ol li {
+                
+                text-align: center;
+                
+            }
+        }
     </style>
 </head>
+
 <body data-spy="scroll" data-target="navbar" data-offset="100">
     <section class="intro-header m-0 p-0 align-items-center d-flex justify-content-center">
         <h1 data-text="Content Writing" class="m-0 p-0 position-absolute text-white text-center display-3">Content
@@ -107,4 +133,5 @@
     {{- partial "footer.html" . -}}
     {{- partial "scripts.html" . -}}
 </body>
+
 </html>
