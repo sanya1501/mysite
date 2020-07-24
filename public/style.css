@@ -687,3 +687,6 @@ del {
     height: 300px;
   }
 }
+.my-5rem{
+  margin: 5rem auto;
+}
