@@ -2,8 +2,16 @@
   <div class="container">
     <!-- Brand -->
     <a class="navbar-brand" href="#"><img src="/images/logo.png" alt="TenSketch logo"></a>
+    <ul class="navbar-nav ml-auto d-lg-none d-xl-none">
+      <li class="nav-item">
+        <a class="nav-link phone-link" href="tel:+919840166419" title="tap to call mobile"
+          aria-label="tap to call mobile">
+          <img src="/images/smartphone.png" class="img-fluid icon" alt="smartphone image">9840166419</a>
+      </li>
+    </ul>
     <!-- Toggler/collapsibe Button -->
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+    <button class="navbar-toggler" aria-label="navbar-toggle-button" type="button" data-toggle="collapse"
+      data-target="#collapsibleNavbar">
       <span class="navbar-toggler-icon"></span>
     </button>
     <div class="collapse navbar-collapse" id="collapsibleNavbar">
@@ -15,11 +23,12 @@
           <a class="nav-link" href="#services" aria-label="land (jump) to services section">Services</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#contact" aria-label="land (jump) to contact section">
-            <img src="/images/phone.png" class="img-fluid icon" alt="call TenSketch">
-          </a>
+          <a class="nav-link" href="#contact" aria-label="land (jump) to contact section">Reach us</a>
         </li>
-      </ul>
+        <li class="nav-item d-none d-lg-block d-xl-none">
+          <a class="nav-link" href="tel:+919840166419" title="tap to call mobile" aria-label="tap to call mobile">
+            <img src="/images/smartphone.png" class="img-fluid icon" alt="smartphone image">9840166419</a>
+        </li>
     </div>
   </div>
 </nav>

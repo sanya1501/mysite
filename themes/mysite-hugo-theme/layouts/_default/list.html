@@ -1,18 +1,64 @@
-{{define "intro"}}
-<section class="intro">
-    <div class="container h-100">
-        <div class="row align-items-center h-100">
-            <div class="col-md-8 mx-auto">
-                <img id="intro" src="images/logo.png" class="img-fluid position-relative" alt="TenSketch logo">
-            </div>
-            <div class="col-md-8 mx-auto">
-                <a href="#services" aria-label="land (jump) to services section">
-                    <img src="/images/down-arrow.png" class="img-fluid icon-a position-relative"
-                        alt="go to services section">
-                </a>
+{{define "slider"}}
+<div id="carouselId" class="carousel slide" data-ride="carousel" data-interval="false">
+    <ol class="carousel-indicators">
+        <li data-target="#carouselId" data-slide-to="0" class="active"></li>
+        <li data-target="#carouselId" data-slide-to="1"></li>
+        <li data-target="#carouselId" data-slide-to="2"></li>
+        <!-- <li data-target="#carouselId" data-slide-to="3"></li> -->
+    </ol>
+    <div class="carousel-inner" role="listbox">
+        <div class="carousel-item slide1 py-6 active">
+            <div class="container d-flex align-items-center">
+                <h1 class="mr-5 d-flex">Get a high performance website designed with minimalism</h1>
+                <img src="/images/logo.png" class="img-fluid" alt="TenSketch logo">
             </div>
         </div>
-</section>
+        <!-- <div class="carousel-item slide2 py-6">
+            <div class="container d-flex h-100 align-items-center">
+                <div class="mr-5">
+                    <h1>Automated Microsoft Excel Invoice</h1>
+                    <h3>One time payment with free customization and support</h3>
+                    <p>Only Rs 3200/-</p>
+                    <button type="button" class="btn btn-primary btn-lg btn-block">Buy Now</button>
+                </div>
+                <div class="d-flex w-100">
+                    <img src="/images/one-click-btn.png" class="img-fluid ml-5" alt="one-click-btn">
+                    <ol>
+                        <li>Generates Sales Report</li>
+                        <li>Saves Invoice</li>
+                        <li>Exports to PDF</li>
+                        <li>Generates next invoice #</li>
+                        <li>Clears content.</li>
+                        <li>Updates next invoice no and saves it</li>
+                    </ol>
+                </div>
+            </div>
+        </div> -->
+        <div class="carousel-item slide3 py-6">
+            <div class="container d-flex h-100 align-items-center">
+                <h1 class="mr-5">Brand your organization like a pro with our highly skilled creative directors</h1>
+                <img src="/images/clients/Classic_Tamil_logo.png" class="img-fluid" alt="Classic_Tamil_logo">
+            </div>
+        </div>
+        <div class="carousel-item slide4 py-6">
+            <div class="container d-flex h-100 align-items-center">
+                <div class="mr-5">
+                    <h1>Free content proofreading for all websites</h1>
+                    <h2>We are the genetic pen of your business communication</h2>
+                </div>
+                <img src="/images/content-256.png" class="img-fluid" alt="content writing">
+            </div>
+        </div>
+    </div>
+    <a class="carousel-control-prev" href="#carouselId" role="button" data-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="sr-only">Previous</span>
+    </a>
+    <a class="carousel-control-next" href="#carouselId" role="button" data-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="sr-only">Next</span>
+    </a>
+</div>
 {{end}}
 {{define "about"}}
 <section id="about">
@@ -33,182 +79,142 @@
 </section>
 {{end}}
 {{define "services"}}
-<section id="services">
-    <div class="container-fluid text-center h-100">
-        <h1 class="mb-5">Services</h1>
-        <div class="row align-items-center h-100">
-            <div class="col-md-6 img-bg">
-                <img data-src="images/website-256.png" class="img-fluid lozad" alt="">
+<section id="services" class="pt-8 pb-5">
+    <h1 class="mb-3 text-center">Services</h1>
+    {{range $index, $val := .Site.Taxonomies.tags.services}}
+    <div class="container">
+        <!-- Content here -->
+        <div class="row align-items-center m-5 p-5">
+            <div class="col-md-6">
+                <img data-src="{{.Page.Params.image}}" class="img-fluid lozad" alt="{{.Name}}">
             </div>
-            <div class="col-md-6 web">
-                <h2>sketches websites</h2>
-                <img data-src="images/website-256.png" class="img-fluid lozad" alt="">
-                <a href="{{.Site.BaseURL}}web-solutions/website-designing-and-development/"><button type="button"
-                        class="btn btn-primary btn-lg">Read
-                        more</button></a>
-            </div>
-        </div>
-        <div class="row align-items-center h-100">
-            <div class="col-md-6 web">
-                <h2>brands your organization</h2>
-                <img data-src="images/branding-256.png" class="img-fluid lozad" alt="">
-                <a href="{{.Site.BaseURL}}branding-services/branding-logo-graphics-designing/"><button type="button"
-                        class="btn btn-primary btn-lg">Read
-                        more</button></a>
-            </div>
-            <div class="col-md-6 img-bg">
-                <img data-src="images/branding-256.png" class="img-fluid lozad" alt="">
-            </div>
-        </div>
-        <div class="row align-items-center h-100">
-            <div class="col-md-6 img-bg">
-                <img data-src="images/content-256.png" class="img-fluid lozad" alt="">
-            </div>
-            <div class="col-md-6 web">
-                <h2>writes content</h2>
-                <img data-src="images/content-256.png" class="img-fluid lozad" alt="">
-                <a href="{{.Site.BaseURL}}content-writing-services/and-proofreading/"><button type="button"
-                        class="btn btn-primary btn-lg">Read
+            <div class="col-md-6 services-des pl-5">
+                <h2>{{.Title}}</h2>
+                <a href="{{.Description}}"><button type="button" class="btn btn-primary btn-lg mt-3">Read
                         more</button></a>
             </div>
         </div>
     </div>
+    {{end}}
 </section>
 {{end}}
-{{define "port"}}
-<section id="portfolio">
-    <div class="container">
-        <h1 class="text-center my-5 pt-5">portfolio</h1>
-        <!-- Nav pills -->
-        <ul class="nav nav-pills nav-justified" role="tablist">
-            <li class="nav-item">
-                <a class="nav-link active" data-toggle="pill" href="#website" role="tab">websites</a>
+{{define "why"}}
+<!-- why TenSKetch -->
+<div class="why position-relative">
+    <!-- <h1 class="text-center pt-5">Why TenSketch</h1> -->
+    <div class="content2 d-flex justify-content-between align-items-center">
+        <div class="bannerText position-relative" id="slideshowText">
+            <div class="active">
+                <h2>Clear Documentation</h2>
+                <p>From start to finish, we write a clear document for communicating with the client and development
+                    team.</p>
+            </div>
+            <div>
+                <h2>DevOps Model</h2>
+                <p>Where operations and development go in sync together to save time in changes.</p>
+            </div>
+            <div>
+                <h2>Original design</h2>
+                <p>We sketch unique customized designs from the scratch sans themes and templates.</p>
+            </div>
+            <div>
+                <h2>High Performance</h2>
+                <p>We use minimal lines of code, optimized resources and open source technologies to create
+                    high-performance websites.</p>
+            </div>
+        </div>
+        <div class="bannerImg position-relative" id="slideshow">
+            <img data-src="images/goals-1.jpg" class="img-fluid lozad active" alt="goal oriented approach">
+            <img data-src="images/devops.png" class="img-fluid lozad" alt="devops">
+            <img data-src="images/original-design.jpg" class="img-fluid lozad" alt="original-design">
+            <img data-src="images/high-performance-websites.jpg" class="img-fluid lozad"
+                alt="high-performance-websites">
+        </div>
+    </div>
+    <div class="icons d-flex justify-content-between align-items-center">
+        <ul class="d-flex position-relative">
+        </ul>
+        <ul class="controls d-flex position-relative list-unstyled">
+            <li>
+                <img src="/images/back.png" class="img-fluid" alt="" onclick="prevSlide();prevSlideText();">
             </li>
-            <li class="nav-item">
-                <a class="nav-link" data-toggle="pill" href="#branding" role="tab">branding</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" data-toggle="pill" href="#content" role="tab">content</a>
+            <li>
+                <img src="/images/next.png" class="img-fluid" alt="" onclick="nextSlide();nextSlideText();">
             </li>
         </ul>
-        <!-- Tab panes -->
-        <div class="tab-content mt-3">
-            <div id="website" class="tab-pane active">
-                <div class="row">
-                    {{range $index, $val := .Site.Taxonomies.tags.websites}}
-                    <div class="col-lg-4 col-md-4 col-4 my-3">
-                        <a href="{{.Description}}" target="_blank" rel="noopener" aria-label="{{.Name}}">
-                            <img src="{{.Page.Params.image}}" class="img-fluid p-2" alt="{{.Name}}">
-                        </a>
-                    </div>
-                    {{end}}
+    </div>
+</div>
+<script>
+    // img slider
+    var slideshow = document.getElementById('slideshow');
+    var slides = slideshow.getElementsByTagName('img');
+    var index = 0;
+    function nextSlide() {
+        slides[index].classList.remove('active');
+        index = (index + 1) % slides.length;
+        slides[index].classList.add('active')
+    }
+    function prevSlide() {
+        slides[index].classList.remove('active');
+        index = (index - 1 + slides.length) % slides.length;
+        slides[index].classList.add('active')
+    }
+    // text slider
+    var slideshowText = document.getElementById('slideshowText');
+    var slidesText = slideshowText.getElementsByTagName('div');
+    var i = 0;
+    function nextSlideText() {
+        slidesText[i].classList.remove('active');
+        i = (i + 1) % slidesText.length;
+        slidesText[i].classList.add('active')
+    }
+    function prevSlideText() {
+        slidesText[i].classList.remove('active');
+        i = (i - 1 + slidesText.length) % slidesText.length;
+        slidesText[i].classList.add('active')
+    }
+</script>
+{{end}}
+{{define "approach"}}
+<section class="py-5" style="background: #000;">
+    <h1 class="text-center my-5 py-5 text-white">Approach</h1>
+    <div class="approach d-flex justify-content-center mb-5 pb-3">
+        <div class="container grid text-center">
+            <div class="box">
+                <div class="content">
+                    <h2>01</h2>
+                    <h3>Client relationship</h3>
+                    <ul class="list-unstyled">
+                        <li>Requirement analysis</li>
+                        <li>Agreement</li>
+                        <li>Business analysis</li>
+                    </ul>
+                    <!-- <button href="#"><button type="button" class="btn btn-primary btn-lg btn-block">Read now</button></a> -->
                 </div>
             </div>
-            <div id="branding" class="tab-pane fade">
-                <ul class="nav nav-pills nav-justified" role="tablist">
-                    <li class="nav-item">
-                        <a class="nav-link active" data-toggle="pill" href="#logo" role="tab">Logo design</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" data-toggle="pill" href="#logor" role="tab">Logo redesign</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" data-toggle="pill" href="#graphics" role="tab">Graphic designs</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" data-toggle="pill" href="#bcards" role="tab">Business cards</a>
-                    </li>
-                </ul>
-                <div class="tab-content mt-3">
-                    <div id="logo" class="tab-pane active">
-                        <div class="row">
-                            {{range $index, $val := .Site.Taxonomies.tags.logo}}
-                            <div class="col-lg-3 col-md-4 col-4 p-2">
-                                <a data-fancybox="gallery" href="{{.Page.Params.image}}" aria-label="{{.Name}}">
-                                    <img src="{{.Page.Params.image}}" class="img-fluid p-2" alt="{{.Name}}">
-                                </a>
-                            </div>
-                            {{end}}
-                        </div>
-                    </div>
-                    <div id="logor" class="tab-pane">
-                        <!-- <div class="masonry">
-                            {{range $index, $val := .Site.Taxonomies.tags.logor}}
-                            <div class="masonry-item">
-                                <div class="masonry-content">
-                                    <a data-fancybox="gallery" href="{{.Page.Params.image}}" aria-label="{{.Name}}">
-                                        <img class="img-fluid" src="{{.Page.Params.Image}}" alt="{{.Title}}">
-                                    </a>
-                                </div>
-                            </div>
-                            {{end}}
-                        </div> -->
-                        <div class="row">
-                            {{range $index, $val := .Site.Taxonomies.tags.logor}}
-                            <div class="col-lg-3 col-md-4 col-4 p-2">
-                                <a data-fancybox="gallery" href="{{.Page.Params.image}}" aria-label="{{.Name}}">
-                                    <img src="{{.Page.Params.image}}" class="img-fluid p-2" alt="{{.Name}}">
-                                </a>
-                            </div>
-                            {{end}}
-                        </div>
-                    </div>
-                    <div id="graphics" class="tab-pane">
-                        <div class="masonry">
-                            {{range $index, $val := .Site.Taxonomies.tags.graphics}}
-                            <div class="masonry-item">
-                                <div class="masonry-content">
-                                    <a href="{{.Description}}" target="_blank" rel="noopener" aria-label="{{.Name}}">
-                                        <img class="img-fluid" src="{{.Page.Params.Image}}" alt="{{.Title}}">
-                                    </a>
-                                </div>
-                            </div>
-                            {{end}}
-                        </div>
-                        <!-- <div class="row">
-                            {{range $index, $val := .Site.Taxonomies.tags.graphics}}
-                            <div class="col-lg-3 col-md-4 col-4 p-2">
-                                <a href="{{.Description}}" target="_blank" rel="noopener" aria-label="{{.Name}}">
-                                    <img src="{{.Page.Params.image}}" class="img-fluid p-2" alt="{{.Name}}">
-                                </a>
-                            </div>
-                            {{end}}
-                        </div> -->
-                    </div>
-                    <div id="bcards" class="tab-pane">
-                        <div class="row">
-                            {{range $index, $val := .Site.Taxonomies.tags.bcards}}
-                            <div class="col-lg-3 col-md-4 col-4 p-2">
-                                <a href="{{.Description}}" target="_blank" rel="noopener" aria-label="{{.Name}}">
-                                    <img src="{{.Page.Params.image}}" class="img-fluid p-2" alt="{{.Name}}">
-                                </a>
-                            </div>
-                            {{end}}
-                        </div>
-                    </div>
+            <div class="box">
+                <div class="content">
+                    <h2>02</h2>
+                    <h3>Project phase</h3>
+                    <ul class="list-unstyled">
+                        <li>Design and development</li>
+                        <li>Testing</li>
+                        <li>Launch</li>
+                    </ul>
+                    <!-- <button href="#"><button type="button" class="btn btn-primary btn-lg btn-block">Read now</button></a> -->
                 </div>
             </div>
-            <div id="content" class="tab-pane fade">
-                <div class="masonry">
-                    {{range $index, $val := .Site.Taxonomies.tags.content}}
-                    <div class="masonry-item">
-                        <div class="masonry-content">
-                            <a href="{{.Description}}" target="_blank" rel="noopener" aria-label="{{.Name}}">
-                                <img class="img-fluid" src="{{.Page.Params.Image}}" alt="{{.Title}}">
-                            </a>
-                        </div>
-                    </div>
-                    {{end}}
+            <div class="box">
+                <div class="content">
+                    <h2>03</h2>
+                    <h3>Support and Maintenance</h3>
+                    <ul class="list-unstyled">
+                        <li>Annual renewal</li>
+                        <li>Bug fixes if any</li>
+                        <li>Content updates</li>
+                    </ul>
+                    <!-- <button href="#"><button type="button" class="btn btn-primary btn-lg btn-block">Read now</button></a> -->
                 </div>
-                <!-- <div class="row mb-2">
-                    {{range $index, $val := .Site.Taxonomies.tags.content}}
-                    <div class="col-lg-3 col-md-4 col-4 p-2 mb-2">
-                        <a href="{{.Description}}" target="_blank" rel="noopener" aria-label="{{.Name}}">
-                            <img src="{{.Page.Params.image}}" class="img-fluid p-2" alt="{{.Name}}">
-                        </a>
-                    </div>
-                    {{end}}
-                </div> -->
             </div>
         </div>
     </div>
@@ -318,137 +324,62 @@
     </div>
 </section>
 {{end}}
-{{define "why"}}
-<!-- why TenSKetch -->
-<div class="why position-relative">
-    <!-- <h1 class="text-center pt-5">Why TenSketch</h1> -->
-    <div class="content2 d-flex justify-content-between align-items-center">
-        <div class="bannerText position-relative" id="slideshowText">
-            <div class="active">
-                <h2>Clear Documentation</h2>
-                <p>From start to finish, we write a clear document for communicating with the client and development
-                    team.</p>
-            </div>
-            <div>
-                <h2>DevOps Model</h2>
-                <p>Where operations and development go in sync together to save time in changes.</p>
-            </div>
-            <div>
-                <h2>Original design</h2>
-                <p>We sketch unique customized designs from the scratch sans themes and templates.</p>
-            </div>
-            <div>
-                <h2>High Performance</h2>
-                <p>We use minimal lines of code, optimized resources and open source technologies to create
-                    high-performance websites.</p>
+{{define "testimonials"}}
+<div id="carouselId1" class="carousel slide" data-ride="carousel" data-interval="false">
+    <div class="carousel-inner text-center py-5" role="listbox">
+        <div class="carousel-item active">
+            <img data-src="/images/Sharath.jpg" class="img-fluid lozad" alt="sharat pic">
+            <div class="container px-5">
+                <h3 class="mt-3">Sharat R Prabhat</h3>
+                <h4>Co-founder | <a href="https://prabhatha.com/">Prabhat</a></h4>
+                <p>TenSketch is one such company, where I put very less effort into creating my companies' websites. I
+                    have worked with other companies, where I do all the creative part of it, which is too strenuous.
+                    But, with TenSketch , I just had to explain once the work was done. Also, their team is highly
+                    proactive - as they approach me with doubts and problems along with the solution, even before I find
+                    out the problems. Hence, I strongly recommend this company.</p>
             </div>
         </div>
-        <div class="bannerImg position-relative" id="slideshow">
-            <img data-src="images/goals-1.jpg" class="img-fluid lozad active" alt="goal oriented approach">
-            <img data-src="images/devops.png" class="img-fluid lozad" alt="devops">
-            <img data-src="images/original-design.jpg" class="img-fluid lozad" alt="original-design">
-            <img data-src="images/high-performance-websites.jpg" class="img-fluid lozad"
-                alt="high-performance-websites">
+        <div class="carousel-item">
+            <img data-src="/images/priyanka.png" class="img-fluid lozad" alt="priyanka pic">
+            <div class="container px-5">
+                <h3 class="mt-3">Priyanka Easwar</h3>
+                <h4>Founder of Theesma Events</h4>
+                <p>We are proud to have you as our "IT Partner"</p>
+            </div>
+        </div>
+        <div class="carousel-item">
+            <img data-src="/images/George.jpg" class="img-fluid lozad" alt="George pic">
+            <div class="container px-5">
+                <h3 class="mt-3">Geo Tattoos</h3>
+                <h4>Founder | <a href="https://www.geotattoos.com/">Geo Tattoos</a></h4>
+                <p>TenSketch is one of the best web design and development company in India. They are really
+                    professional in their work and provide services on time and at very affordable prices.</p>
+            </div>
         </div>
     </div>
-    <div class="icons d-flex justify-content-between align-items-center">
-        <ul class="d-flex position-relative">
-        </ul>
-        <ul class="controls d-flex position-relative list-unstyled">
-            <li>
-                <img src="/images/back.png" class="img-fluid" alt="" onclick="prevSlide();prevSlideText();">
-            </li>
-            <li>
-                <img src="/images/next.png" class="img-fluid" alt="" onclick="nextSlide();nextSlideText();">
-            </li>
-        </ul>
-    </div>
+    <a class="carousel-control-prev" href="#carouselId1" role="button" data-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="sr-only">Previous</span>
+    </a>
+    <a class="carousel-control-next" href="#carouselId1" role="button" data-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="sr-only">Next</span>
+    </a>
 </div>
-<script>
-    // img slider
-    var slideshow = document.getElementById('slideshow');
-    var slides = slideshow.getElementsByTagName('img');
-    var index = 0;
-    function nextSlide() {
-        slides[index].classList.remove('active');
-        index = (index + 1) % slides.length;
-        slides[index].classList.add('active')
-    }
-    function prevSlide() {
-        slides[index].classList.remove('active');
-        index = (index - 1 + slides.length) % slides.length;
-        slides[index].classList.add('active')
-    }
-    // text slider
-    var slideshowText = document.getElementById('slideshowText');
-    var slidesText = slideshowText.getElementsByTagName('div');
-    var i = 0;
-    function nextSlideText() {
-        slidesText[i].classList.remove('active');
-        i = (i + 1) % slidesText.length;
-        slidesText[i].classList.add('active')
-    }
-    function prevSlideText() {
-        slidesText[i].classList.remove('active');
-        i = (i - 1 + slidesText.length) % slidesText.length;
-        slidesText[i].classList.add('active')
-    }
-</script>
 {{end}}
-{{define "approach"}}
-<div class="container">
-    <h1 class="text-center my-5 pt-5">Approach</h1>
-</div>
-<section class="approach d-flex justify-content-center">
-    <div class="container grid text-center">
-        <div class="box">
-            <div class="content">
-                <h2>01</h2>
-                <h3>Client relationship</h3>
-                <ul class="list-unstyled">
-                    <li>Requirement analysis</li>
-                    <li>Agreement</li>
-                    <li>Business analysis</li>
-                </ul>
-                <!-- <button href="#"><button type="button" class="btn btn-primary btn-lg btn-block">Read now</button></a> -->
-            </div>
-        </div>
-        <div class="box">
-            <div class="content">
-                <h2>02</h2>
-                <h3>Project phase</h3>
-                <ul class="list-unstyled">
-                    <li>Design and development</li>
-                    <li>Testing</li>
-                    <li>Launch</li>
-                </ul>
-                <!-- <button href="#"><button type="button" class="btn btn-primary btn-lg btn-block">Read now</button></a> -->
-            </div>
-        </div>
-        <div class="box">
-            <div class="content">
-                <h2>03</h2>
-                <h3>Support and Maintenance</h3>
-                <ul class="list-unstyled">
-                    <li>Annual renewal</li>
-                    <li>Bug fixes if any</li>
-                    <li>Content updates</li>
-                </ul>
-                <!-- <button href="#"><button type="button" class="btn btn-primary btn-lg btn-block">Read now</button></a> -->
+{{define "clients"}}
+<section id="clients">
+    <div class="overlay py-5">
+        <div class="container">
+            <h1 class="text-center mb-5">Our Clients</h1>
+            <div class="customer-logos slider">
+                {{range $index, $val := .Site.Taxonomies.tags.clients}}
+                <div class="slide" aria-controls="auto slider of clients section" aria-label="testimonial slide">
+                    <img data-src="{{.Page.Params.image}}" class="img-fluid lozad" alt="{{.Name}}">
+                </div>
+                {{end}}
             </div>
         </div>
     </div>
 </section>
-{{end}}
-{{define "clients"}}
-<div id="clients" class="container">
-    <h1 class="text-center mb-5">Our Clients</h1>
-    <section class="customer-logos slider">
-        {{range $index, $val := .Site.Taxonomies.tags.clients}}
-        <div class="slide" aria-controls="auto slider of clients section">
-            <img data-src="{{.Page.Params.image}}" class="img-fluid lozad" alt="{{.Name}}">
-        </div>
-        {{end}}
-    </section>
-</div>
 {{end}}

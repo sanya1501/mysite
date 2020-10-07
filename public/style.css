@@ -1,8 +1,9 @@
+@import url("https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=Josefin+Sans:wght@400;700&display=swap");
 @font-face {
-  font-family: "enchanting_celebrationsRg";
-  src: url("enchanting_celebrations-webfont.woff2") format("woff2"),
-    url("enchanting_celebrations-webfont.woff") format("woff"),
-    url("enchanting_celebrations-webfont.ttf") format("ttf");
+  font-family: "enchanting_celebrations";
+  src: url("/enchanting_celebrations-webfont.woff2") format("woff2"),
+    url("/enchanting_celebrations-webfont.woff") format("woff"),
+    url("/enchanting_celebrations-webfont.ttf") format("ttf");
   font-weight: normal;
   font-style: normal;
 }
@@ -15,13 +16,18 @@ body {
   -webkit-font-smoothing: antialiased;
   margin: 0;
   padding: 0;
-  font-family: "Times New Roman", Times, serif;
+  font-family: "Josefin Sans", sans-serif;
 }
-h1,
+h1 {
+  font-family: "enchanting_celebrations", sans-serif;
+}
 h2,
 h3,
 h4 {
-  font-family: "enchanting_celebrationsRg";
+  font-family: "DM Serif Display", serif;
+}
+h4 {
+  line-height: 1.7;
 }
 p {
   text-align: justify;
@@ -32,17 +38,57 @@ p {
 li {
   font-size: 1.1rem;
   line-height: 1.6rem;
-  /* font-family: Georgia, 'Times New Roman', Times, serif; */
 }
 a:hover {
   text-decoration: none;
 }
-.intro {
-  background: url(/images/1st-slide.jpg) no-repeat;
-  background-position: initial;
-  background-size: cover;
+.pt-8 {
+  padding-top: 8rem;
+}
+.py-6 {
+  padding: 6rem 0;
+}
+.carousel-inner {
   height: 100vh;
-  padding: 12rem 0rem;
+}
+#carouselId .carousel-item {
+  height: 100vh;
+  background: #c4c4c45d;
+}
+#carouselId .carousel-inner::before {
+  content: url(/images/bubble.png);
+  position: absolute;
+  opacity: 0.2;
+  left: 0;
+  top: 0;
+}
+#carouselId h1 {
+  line-height: 1.5;
+  font-size: 3.5rem;
+  font-family: "DM Serif Display", serif;
+}
+.slide1 img {
+  height: 400px;
+}
+.slide4 img {
+  height: 300px;
+}
+.nithin {
+  background: rgb(0, 0, 0);
+  background: linear-gradient(
+    0deg,
+    rgba(0, 0, 0, 1) 43%,
+    rgba(61, 61, 61, 1) 75%,
+    rgba(106, 106, 106, 1) 87%,
+    rgba(144, 144, 144, 1) 93%,
+    rgba(217, 217, 217, 1) 96%,
+    rgba(255, 255, 255, 1) 100%
+  );
+  height: 100vh;
+}
+/* .intro {
+  background: radial-gradient(#fff, #2d2d2d);
+  height: 100vh;
 }
 #intro {
   height: 300px;
@@ -58,7 +104,6 @@ a:hover {
     bottom: 0;
   }
 }
-
 .icon-a {
   height: 40px;
   margin-left: 10rem;
@@ -77,13 +122,12 @@ a:hover {
     opacity: 1;
     top: 0;
   }
-}
+} */
 .navbar-light .navbar-nav .nav-link {
   color: #000;
   font-size: 1.2rem;
   letter-spacing: 3px;
   padding-left: 1rem;
-  font-family: "enchanting_celebrationsRg";
 }
 .navbar-brand img {
   height: 70px;
@@ -95,9 +139,26 @@ a:hover {
 .nav-pills .show > .nav-link {
   background-color: #000;
 }
+.dropdown-item {
+  text-align: right;
+}
+.phone-link {
+  letter-spacing: 1px !important;
+  font-size: 1rem !important;
+  padding-right: 0.3rem !important;
+  margin-top: 0.5rem;
+}
 .icon {
-  height: 20px;
-  margin-bottom: 8px;
+  margin: 0 0.3rem 0.5rem 0;
+}
+@media (max-width: 320px) {
+  .icon {
+    height: 20px !important;
+  }
+}
+.navbar-toggler {
+  padding: 0.15rem 0.35rem;
+  font-size: 1rem !important;
 }
 .affix {
   top: 0;
@@ -117,32 +178,40 @@ a:hover {
     top: 0;
   }
 }
-
 #about {
   height: 100vh;
 }
 #services {
-  background: #fff;
-  padding-top: 12rem;
+  background: #000000e6;
+  color: #fff;
 }
-#services .col-md-6 {
-  padding: 6rem 0rem;
+#services img {
+  border-radius: 10px;
+  box-shadow: 0 5px 10px rgb(25 25 25), 0 14px 25px rgb(134 134 134 / 77%);
 }
-.img-bg {
-  background: #000;
+.services-des::before {
+  content: "";
+  background: linear-gradient(90deg, #fff, #353535da);
+  width: 50px;
+  height: 50px;
+  box-shadow: 0 5px 10px rgb(25 25 25), 0 15px 40px rgb(134 134 134 / 77%);
+  border-bottom-left-radius: 50%;
+  border-top-right-radius: 50%;
+  opacity: 0.5;
+  z-index: -1;
+  position: absolute;
+  top: -4rem;
+  left: 2.8rem;
 }
-.img-bg img {
-  filter: invert(1);
-}
-.web img {
-  display: none;
+#services h2 {
+  letter-spacing: 2px;
 }
 #services a {
   color: #fff;
   text-decoration: none;
 }
-.btn{
-  border-radius: 5px!important;
+.btn {
+  border-radius: 5px !important;
 }
 #portfolio img {
   object-fit: cover;
@@ -181,9 +250,17 @@ a:hover {
 .masonry-item:hover {
   filter: drop-shadow(0px 5px 5px rgba(0, 0, 0, 0.3));
 }
+@media (min-width: 992px) {
+  .d-lg-block {
+    display: inline-block !important;
+  }
+}
 @media (max-width: 600px) {
   .masonry {
     columns: 2;
+  }
+  #contact .pl-5 {
+    padding-left: 0 !important;
   }
 }
 .btn.focus,
@@ -216,9 +293,6 @@ a:hover {
   box-shadow: inset 0 0 40px rgba(0, 0, 0, 0.2), 0 0 20px rgba(0, 0, 0, 0.5);
   border-radius: 20px;
 }
-/* .col-sm-6:nth-child(2) .price-table {
-  transform: scale(1.1);
-} */
 .price-table .price-head {
   padding: 20px;
   background: linear-gradient(45deg, #fff, #707070);
@@ -263,7 +337,7 @@ a:hover {
   color: #000;
   opacity: 0.04;
   z-index: -2;
-  font-family: "enchanting_celebrationsRg";
+  font-family: "enchanting_celebrations";
 }
 .content2 {
   padding-top: 10rem;
@@ -314,20 +388,20 @@ a:hover {
   }
 }
 .approach {
-  background-color: #fff;
+  background-color: #000;
 }
 .grid {
   position: relative;
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
   grid-template-rows: auto;
-  grid-gap: 0 110px;
+  grid-gap: 0 125px;
   z-index: 5;
 }
 .grid .box {
   position: relative;
   height: 400px;
-  background: #fff;
+  background: #000;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -339,7 +413,7 @@ a:hover {
   left: -2px;
   right: -2px;
   bottom: -2px;
-  background: #000;
+  background: #fff;
   transform: skew(2deg, 2deg);
   z-index: -1;
 }
@@ -364,17 +438,22 @@ a:hover {
 .box .content h3 {
   margin: 0 0 15px;
   font-weight: 500;
-  color: #212121;
+  color: #fff;
+  font-size: 2rem;
+  margin-bottom: 2rem;
 }
-.box .content h3 span {
+/* .box .content h3 span {
   margin-left: 1rem;
   padding: 5px;
   background: #212121;
   color: #fff;
   font-size: 20px;
-}
+} */
 .box .content li {
-  color: #212121;
+  color: #fff;
+  font-size: 1.5rem;
+  line-height: 1.5;
+  margin-bottom: 1rem;
 }
 .btn-primary {
   background-color: #212121;
@@ -400,10 +479,35 @@ a:hover {
 .show > .btn-primary.dropdown-toggle:focus {
   box-shadow: 0 0 0 0.1rem #fff;
 }
-#clients,
 #contact,
 #pricing {
   padding-top: 8rem;
+}
+#carouselId1 .carousel-inner {
+  height: 100vh;
+  background: radial-gradient(#fff, #2d2d2d);
+}
+#carouselId1 img {
+  border-radius: 50%;
+  height: 200px;
+}
+#carouselId1 p {
+  text-align: center;
+  color: #fff;
+  margin-top: 2rem;
+  font-size: 1.5rem;
+  letter-spacing: 1.6px;
+}
+#carouselId1 a {
+  color: #fff;
+  text-decoration: underline;
+}
+#clients {
+  background: url(/images/smoke-bg1.jpg) no-repeat center;
+  background-size: cover;
+}
+.overlay {
+  background-color: rgba(255, 255, 255, 0.418);
 }
 .slick-slide {
   margin: 0px 20px;
@@ -497,14 +601,17 @@ a:hover {
   display: none;
 }
 #contact {
-  background-color: #5f5f5f;
+  background-color: #2f2d2dcf;
   color: #fff;
 }
 #contact a {
-  color: rgb(126, 220, 248);
+  color: #e4e4e4;
+  transition: 0.2s ease-out;
 }
 #contact a:hover {
-  color: #fff;
+  text-decoration: underline;
+  position: relative;
+  left: 2px;
 }
 .filter {
   filter: invert(1);
@@ -568,6 +675,68 @@ del {
   }
 }
 @media (max-width: 768px) {
+  #carouselId .d-flex {
+    flex-direction: column;
+  }
+  #carouselId .carousel-inner {
+    height: 100%;
+  }
+  .carousel-inner .py-6 {
+    padding: 3rem 0;
+  }
+  #carouselId .carousel-item {
+    height: 100%;
+  }
+  #carouselId h1 {
+    line-height: 1.3;
+    font-size: 2.5rem;
+    text-align: center;
+  }
+  .slide2 h3,
+  .slide2 p,
+  .slide4 h2 {
+    text-align: center;
+  }
+  .slide2 ol {
+    list-style: none;
+    padding: 0;
+  }
+  .slide2 li {
+    text-align: center;
+  }
+  /* .btn-lg {
+    width: 80%;
+  } */
+  #carouselId .ml-5 {
+    margin-left: 0 !important;
+  }
+  #carouselId .mr-5 {
+    margin-right: 0 !important;
+  }
+  .slide1 img {
+    height: 250px;
+  }
+  .slide3 img {
+    height: 100px;
+  }
+  .slide4 img {
+    height: 200px;
+  }
+  .slide2 .btn {
+    margin-bottom: 1rem;
+  }
+  .slide2 img {
+    display: none;
+  }
+  #carouselId1 .carousel-inner {
+    background: #3333338c;
+    height: 100%;
+  }
+  #carouselId1 p {
+    margin-top: 1rem;
+    font-size: 1.2rem;
+    letter-spacing: 1.4px;
+  }
   .why {
     height: 50vh;
   }
@@ -580,6 +749,36 @@ del {
   .controls {
     bottom: 12rem;
   }
+  #contact {
+    text-align: center;
+  }
+  #contact p {
+    text-align: center !important;
+  }
+  .social ul {
+    justify-content: center;
+  }
+}
+@media (max-width: 767px) {
+  #services {
+    text-align: center;
+  }
+  #services .m-5,
+  #services .p-5 {
+    margin: 0rem !important;
+    padding: 0rem !important;
+  }
+  #services .pl-5 {
+    padding-left: 15px !important;
+    padding-top: 3rem;
+  }
+  .services-des .mt-3 {
+    margin-bottom: 3rem;
+  }
+  .services-des .btn {
+    display: block;
+    width: 100%;
+  }
 }
 @media (max-width: 576px) {
   p {
@@ -588,29 +787,9 @@ del {
   }
   #services {
     padding-top: 10rem !important;
-    background: #000 !important;
-    color: #fff;
-  }
-  #services .col-md-6 {
-    padding: 3rem 0rem !important;
-  }
-  #intro {
-    height: 200px;
-    margin-left: 6rem;
-  }
-  .icon-a {
-    margin-left: 13rem;
-  }
-  .img-bg {
-    display: none;
   }
   #about .col-md-8 {
     padding: 0 30px;
-  }
-  .web img {
-    display: initial !important;
-    filter: invert(1);
-    max-width: 20%;
   }
   #portfolio .col-4 {
     padding-left: 7px !important;
@@ -649,15 +828,11 @@ del {
   .icons {
     flex-direction: column-reverse;
   }
-  #contact {
-    text-align: center;
-    margin-bottom: 3rem;
-  }
-  .social ul {
-    justify-content: center;
-  }
 }
 @media (max-width: 425px) {
+  #carouselId .carousel-inner {
+    height: 100vh;
+  }
   .content2 .bannerText {
     margin-top: 0rem;
   }
@@ -665,19 +840,18 @@ del {
     height: 250px;
   }
 }
-@media (max-width: 320px) {
+/* @media (max-width: 320px) {
   #intro {
     height: 170px;
   }
-}
+} */
 @media only screen and (device-width: 375px) and (device-height: 812px) and (-webkit-device-pixel-ratio: 3) {
-  #intro {
+  /* #intro {
     height: 160px;
     margin-left: 10rem;
     margin-top: 3rem;
-  }
+  } */
   .icon-a {
-    margin-left: 15rem;
     margin-bottom: 10rem !important;
   }
   .why {
@@ -687,6 +861,6 @@ del {
     height: 300px;
   }
 }
-.my-5rem{
+.my-5rem {
   margin: 5rem auto;
 }
