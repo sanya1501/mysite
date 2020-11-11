@@ -8,10 +8,10 @@ description: "High performance and Minimalistic website designs"
 keywords: "website designing, website designer, website development, web designing, web designer, web development, web developer, website designing company in Chennai, website designers company in Chennai, web designing company in Chennai, web designers company in Chennai, website development company in Chennai, website developers company in Chennai, web development company in Chennai, web developers company in Chennai"
 ---
 
-## All our website come with the following basic qualities
+## Our website quality standards
 
-1. With an SSL Certificate, (https secured connection).
-2. Mobile responsiveness, mobile-friendliness and a mobile-first approach.
+1. SSL Certificate, (https secured connection).
+2. Mobile responsive and friendly.
 3. Basic SEO audited by Google.
-4. Content proofread and edited even if the client does not need it.
-5. Loads fast using minimal resources.
+4. Proofread contents.
+5. Loads in less than 3 secs using minimal resources.

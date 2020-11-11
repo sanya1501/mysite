@@ -485,7 +485,7 @@ a:hover {
 }
 #carouselId1 .carousel-inner {
   height: 100vh;
-  background: radial-gradient(#fff, #2d2d2d);
+  background: linear-gradient(rgb(122, 122, 122), #2d2d2d);
 }
 #carouselId1 img {
   border-radius: 50%;
